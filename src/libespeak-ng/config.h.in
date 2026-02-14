@@ -4,7 +4,6 @@
 #cmakedefine01 HAVE_SYS_ENDIAN_H
 #cmakedefine01 HAVE_ISWBLANK
 
-#cmakedefine01 USE_ASYNC
 #cmakedefine01 USE_KLATT
 #cmakedefine01 USE_LIBPCAUDIO
 #cmakedefine01 USE_LIBSONIC

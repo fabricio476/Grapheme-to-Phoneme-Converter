@@ -1,7 +1,7 @@
 src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o: \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/ucd-tools/src/proplist.c \
+ /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/proplist.c \
  /usr/include/stdc-predef.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/ucd-tools/src/include/ucd/ucd.h \
+ /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/include/ucd/ucd.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

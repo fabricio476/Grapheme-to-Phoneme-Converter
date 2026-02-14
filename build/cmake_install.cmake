@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/dados/Projeto g2p/meu-g2p
+# Install script for directory: /mnt/dados/github/fab476/meu-g2p
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,26 +43,26 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/dados/Projeto g2p/meu-g2p/build/espeak-ng.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/dados/github/fab476/meu-g2p/build/espeak-ng.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vim/vimfiles" TYPE DIRECTORY FILES
-    "/mnt/dados/Projeto g2p/meu-g2p/vim/ftdetect"
-    "/mnt/dados/Projeto g2p/meu-g2p/vim/syntax"
+    "/mnt/dados/github/fab476/meu-g2p/vim/ftdetect"
+    "/mnt/dados/github/fab476/meu-g2p/vim/syntax"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/dados/Projeto g2p/meu-g2p/build/src/cmake_install.cmake")
+  include("/mnt/dados/github/fab476/meu-g2p/build/src/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/mnt/dados/Projeto g2p/meu-g2p/build/install_local_manifest.txt"
+  file(WRITE "/mnt/dados/github/fab476/meu-g2p/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -78,6 +78,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/mnt/dados/Projeto g2p/meu-g2p/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/mnt/dados/github/fab476/meu-g2p/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

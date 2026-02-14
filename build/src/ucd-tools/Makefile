@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/dados/Projeto g2p/meu-g2p"
+CMAKE_SOURCE_DIR = /mnt/dados/github/fab476/meu-g2p
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
+CMAKE_BINARY_DIR = /mnt/dados/github/fab476/meu-g2p/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /mnt/dados/github/fab476/meu-g2p/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/dados/Projeto\ g2p/meu-g2p/build/CPackSourceConfig.cmake
+	cd /mnt/dados/github/fab476/meu-g2p/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/dados/github/fab476/meu-g2p/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -162,14 +162,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools//CMakeFiles/progress.marks"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" 0
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools//CMakeFiles/progress.marks
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/clean
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/clean
 .PHONY : clean
 
 # The main clean target
@@ -178,22 +178,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/preinstall
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/preinstall
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/ucd-tools/CMakeFiles/ucd.dir/rule:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/CMakeFiles/ucd.dir/rule
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ucd-tools/CMakeFiles/ucd.dir/rule
 .PHONY : src/ucd-tools/CMakeFiles/ucd.dir/rule
 
 # Convenience name for target.
@@ -202,7 +202,7 @@ ucd: src/ucd-tools/CMakeFiles/ucd.dir/rule
 
 # fast build rule for target.
 ucd/fast:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/build
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/build
 .PHONY : ucd/fast
 
 src/case.o: src/case.c.o
@@ -210,7 +210,7 @@ src/case.o: src/case.c.o
 
 # target to build an object file
 src/case.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o
 .PHONY : src/case.c.o
 
 src/case.i: src/case.c.i
@@ -218,7 +218,7 @@ src/case.i: src/case.c.i
 
 # target to preprocess a source file
 src/case.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.i
 .PHONY : src/case.c.i
 
 src/case.s: src/case.c.s
@@ -226,7 +226,7 @@ src/case.s: src/case.c.s
 
 # target to generate assembly for a file
 src/case.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.s
 .PHONY : src/case.c.s
 
 src/categories.o: src/categories.c.o
@@ -234,7 +234,7 @@ src/categories.o: src/categories.c.o
 
 # target to build an object file
 src/categories.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o
 .PHONY : src/categories.c.o
 
 src/categories.i: src/categories.c.i
@@ -242,7 +242,7 @@ src/categories.i: src/categories.c.i
 
 # target to preprocess a source file
 src/categories.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.i
 .PHONY : src/categories.c.i
 
 src/categories.s: src/categories.c.s
@@ -250,7 +250,7 @@ src/categories.s: src/categories.c.s
 
 # target to generate assembly for a file
 src/categories.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.s
 .PHONY : src/categories.c.s
 
 src/ctype.o: src/ctype.c.o
@@ -258,7 +258,7 @@ src/ctype.o: src/ctype.c.o
 
 # target to build an object file
 src/ctype.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o
 .PHONY : src/ctype.c.o
 
 src/ctype.i: src/ctype.c.i
@@ -266,7 +266,7 @@ src/ctype.i: src/ctype.c.i
 
 # target to preprocess a source file
 src/ctype.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.i
 .PHONY : src/ctype.c.i
 
 src/ctype.s: src/ctype.c.s
@@ -274,7 +274,7 @@ src/ctype.s: src/ctype.c.s
 
 # target to generate assembly for a file
 src/ctype.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.s
 .PHONY : src/ctype.c.s
 
 src/proplist.o: src/proplist.c.o
@@ -282,7 +282,7 @@ src/proplist.o: src/proplist.c.o
 
 # target to build an object file
 src/proplist.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o
 .PHONY : src/proplist.c.o
 
 src/proplist.i: src/proplist.c.i
@@ -290,7 +290,7 @@ src/proplist.i: src/proplist.c.i
 
 # target to preprocess a source file
 src/proplist.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.i
 .PHONY : src/proplist.c.i
 
 src/proplist.s: src/proplist.c.s
@@ -298,7 +298,7 @@ src/proplist.s: src/proplist.c.s
 
 # target to generate assembly for a file
 src/proplist.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.s
 .PHONY : src/proplist.c.s
 
 src/scripts.o: src/scripts.c.o
@@ -306,7 +306,7 @@ src/scripts.o: src/scripts.c.o
 
 # target to build an object file
 src/scripts.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o
 .PHONY : src/scripts.c.o
 
 src/scripts.i: src/scripts.c.i
@@ -314,7 +314,7 @@ src/scripts.i: src/scripts.c.i
 
 # target to preprocess a source file
 src/scripts.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.i
 .PHONY : src/scripts.c.i
 
 src/scripts.s: src/scripts.c.s
@@ -322,7 +322,7 @@ src/scripts.s: src/scripts.c.s
 
 # target to generate assembly for a file
 src/scripts.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.s
 .PHONY : src/scripts.c.s
 
 src/tostring.o: src/tostring.c.o
@@ -330,7 +330,7 @@ src/tostring.o: src/tostring.c.o
 
 # target to build an object file
 src/tostring.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o
 .PHONY : src/tostring.c.o
 
 src/tostring.i: src/tostring.c.i
@@ -338,7 +338,7 @@ src/tostring.i: src/tostring.c.i
 
 # target to preprocess a source file
 src/tostring.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.i
 .PHONY : src/tostring.c.i
 
 src/tostring.s: src/tostring.c.s
@@ -346,7 +346,7 @@ src/tostring.s: src/tostring.c.s
 
 # target to generate assembly for a file
 src/tostring.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.s
 .PHONY : src/tostring.c.s
 
 # Help Target
@@ -394,6 +394,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

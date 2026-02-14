@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/dados/Projeto g2p/meu-g2p"
+CMAKE_SOURCE_DIR = /mnt/dados/github/fab476/meu-g2p
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
+CMAKE_BINARY_DIR = /mnt/dados/github/fab476/meu-g2p/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /mnt/dados/github/fab476/meu-g2p/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/dados/Projeto\ g2p/meu-g2p/build/CPackSourceConfig.cmake
+	cd /mnt/dados/github/fab476/meu-g2p/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/dados/github/fab476/meu-g2p/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -162,14 +162,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" "/mnt/dados/Projeto g2p/meu-g2p/build/src/libespeak-ng//CMakeFiles/progress.marks"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" 0
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng//CMakeFiles/progress.marks
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/clean
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/clean
 .PHONY : clean
 
 # The main clean target
@@ -178,22 +178,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/preinstall
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/preinstall
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/rule:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/CMakeFiles/espeak-ng.dir/rule
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/CMakeFiles/espeak-ng.dir/rule
 .PHONY : src/libespeak-ng/CMakeFiles/espeak-ng.dir/rule
 
 # Convenience name for target.
@@ -202,7 +202,7 @@ espeak-ng: src/libespeak-ng/CMakeFiles/espeak-ng.dir/rule
 
 # fast build rule for target.
 espeak-ng/fast:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/build
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/build
 .PHONY : espeak-ng/fast
 
 common.o: common.c.o
@@ -210,7 +210,7 @@ common.o: common.c.o
 
 # target to build an object file
 common.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/common.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/common.c.o
 .PHONY : common.c.o
 
 common.i: common.c.i
@@ -218,7 +218,7 @@ common.i: common.c.i
 
 # target to preprocess a source file
 common.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/common.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/common.c.i
 .PHONY : common.c.i
 
 common.s: common.c.s
@@ -226,7 +226,7 @@ common.s: common.c.s
 
 # target to generate assembly for a file
 common.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/common.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/common.c.s
 .PHONY : common.c.s
 
 compiledict.o: compiledict.c.o
@@ -234,7 +234,7 @@ compiledict.o: compiledict.c.o
 
 # target to build an object file
 compiledict.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.o
 .PHONY : compiledict.c.o
 
 compiledict.i: compiledict.c.i
@@ -242,7 +242,7 @@ compiledict.i: compiledict.c.i
 
 # target to preprocess a source file
 compiledict.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.i
 .PHONY : compiledict.c.i
 
 compiledict.s: compiledict.c.s
@@ -250,7 +250,7 @@ compiledict.s: compiledict.c.s
 
 # target to generate assembly for a file
 compiledict.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.s
 .PHONY : compiledict.c.s
 
 dictionary.o: dictionary.c.o
@@ -258,7 +258,7 @@ dictionary.o: dictionary.c.o
 
 # target to build an object file
 dictionary.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.o
 .PHONY : dictionary.c.o
 
 dictionary.i: dictionary.c.i
@@ -266,7 +266,7 @@ dictionary.i: dictionary.c.i
 
 # target to preprocess a source file
 dictionary.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.i
 .PHONY : dictionary.c.i
 
 dictionary.s: dictionary.c.s
@@ -274,7 +274,7 @@ dictionary.s: dictionary.c.s
 
 # target to generate assembly for a file
 dictionary.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.s
 .PHONY : dictionary.c.s
 
 encoding.o: encoding.c.o
@@ -282,7 +282,7 @@ encoding.o: encoding.c.o
 
 # target to build an object file
 encoding.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.o
 .PHONY : encoding.c.o
 
 encoding.i: encoding.c.i
@@ -290,7 +290,7 @@ encoding.i: encoding.c.i
 
 # target to preprocess a source file
 encoding.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.i
 .PHONY : encoding.c.i
 
 encoding.s: encoding.c.s
@@ -298,7 +298,7 @@ encoding.s: encoding.c.s
 
 # target to generate assembly for a file
 encoding.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.s
 .PHONY : encoding.c.s
 
 error.o: error.c.o
@@ -306,7 +306,7 @@ error.o: error.c.o
 
 # target to build an object file
 error.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.o
 .PHONY : error.c.o
 
 error.i: error.c.i
@@ -314,7 +314,7 @@ error.i: error.c.i
 
 # target to preprocess a source file
 error.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.i
 .PHONY : error.c.i
 
 error.s: error.c.s
@@ -322,7 +322,7 @@ error.s: error.c.s
 
 # target to generate assembly for a file
 error.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.s
 .PHONY : error.c.s
 
 espeak_api.o: espeak_api.c.o
@@ -330,7 +330,7 @@ espeak_api.o: espeak_api.c.o
 
 # target to build an object file
 espeak_api.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.o
 .PHONY : espeak_api.c.o
 
 espeak_api.i: espeak_api.c.i
@@ -338,7 +338,7 @@ espeak_api.i: espeak_api.c.i
 
 # target to preprocess a source file
 espeak_api.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.i
 .PHONY : espeak_api.c.i
 
 espeak_api.s: espeak_api.c.s
@@ -346,7 +346,7 @@ espeak_api.s: espeak_api.c.s
 
 # target to generate assembly for a file
 espeak_api.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.s
 .PHONY : espeak_api.c.s
 
 intonation.o: intonation.c.o
@@ -354,7 +354,7 @@ intonation.o: intonation.c.o
 
 # target to build an object file
 intonation.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o
 .PHONY : intonation.c.o
 
 intonation.i: intonation.c.i
@@ -362,7 +362,7 @@ intonation.i: intonation.c.i
 
 # target to preprocess a source file
 intonation.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.i
 .PHONY : intonation.c.i
 
 intonation.s: intonation.c.s
@@ -370,7 +370,7 @@ intonation.s: intonation.c.s
 
 # target to generate assembly for a file
 intonation.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.s
 .PHONY : intonation.c.s
 
 langopts.o: langopts.c.o
@@ -378,7 +378,7 @@ langopts.o: langopts.c.o
 
 # target to build an object file
 langopts.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.o
 .PHONY : langopts.c.o
 
 langopts.i: langopts.c.i
@@ -386,7 +386,7 @@ langopts.i: langopts.c.i
 
 # target to preprocess a source file
 langopts.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.i
 .PHONY : langopts.c.i
 
 langopts.s: langopts.c.s
@@ -394,7 +394,7 @@ langopts.s: langopts.c.s
 
 # target to generate assembly for a file
 langopts.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.s
 .PHONY : langopts.c.s
 
 mnemonics.o: mnemonics.c.o
@@ -402,7 +402,7 @@ mnemonics.o: mnemonics.c.o
 
 # target to build an object file
 mnemonics.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o
 .PHONY : mnemonics.c.o
 
 mnemonics.i: mnemonics.c.i
@@ -410,7 +410,7 @@ mnemonics.i: mnemonics.c.i
 
 # target to preprocess a source file
 mnemonics.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.i
 .PHONY : mnemonics.c.i
 
 mnemonics.s: mnemonics.c.s
@@ -418,7 +418,7 @@ mnemonics.s: mnemonics.c.s
 
 # target to generate assembly for a file
 mnemonics.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.s
 .PHONY : mnemonics.c.s
 
 numbers.o: numbers.c.o
@@ -426,7 +426,7 @@ numbers.o: numbers.c.o
 
 # target to build an object file
 numbers.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.o
 .PHONY : numbers.c.o
 
 numbers.i: numbers.c.i
@@ -434,7 +434,7 @@ numbers.i: numbers.c.i
 
 # target to preprocess a source file
 numbers.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.i
 .PHONY : numbers.c.i
 
 numbers.s: numbers.c.s
@@ -442,7 +442,7 @@ numbers.s: numbers.c.s
 
 # target to generate assembly for a file
 numbers.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.s
 .PHONY : numbers.c.s
 
 phoneme.o: phoneme.c.o
@@ -450,7 +450,7 @@ phoneme.o: phoneme.c.o
 
 # target to build an object file
 phoneme.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.o
 .PHONY : phoneme.c.o
 
 phoneme.i: phoneme.c.i
@@ -458,7 +458,7 @@ phoneme.i: phoneme.c.i
 
 # target to preprocess a source file
 phoneme.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.i
 .PHONY : phoneme.c.i
 
 phoneme.s: phoneme.c.s
@@ -466,7 +466,7 @@ phoneme.s: phoneme.c.s
 
 # target to generate assembly for a file
 phoneme.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.s
 .PHONY : phoneme.c.s
 
 phonemelist.o: phonemelist.c.o
@@ -474,7 +474,7 @@ phonemelist.o: phonemelist.c.o
 
 # target to build an object file
 phonemelist.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.o
 .PHONY : phonemelist.c.o
 
 phonemelist.i: phonemelist.c.i
@@ -482,7 +482,7 @@ phonemelist.i: phonemelist.c.i
 
 # target to preprocess a source file
 phonemelist.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.i
 .PHONY : phonemelist.c.i
 
 phonemelist.s: phonemelist.c.s
@@ -490,7 +490,7 @@ phonemelist.s: phonemelist.c.s
 
 # target to generate assembly for a file
 phonemelist.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.s
 .PHONY : phonemelist.c.s
 
 readclause.o: readclause.c.o
@@ -498,7 +498,7 @@ readclause.o: readclause.c.o
 
 # target to build an object file
 readclause.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.o
 .PHONY : readclause.c.o
 
 readclause.i: readclause.c.i
@@ -506,7 +506,7 @@ readclause.i: readclause.c.i
 
 # target to preprocess a source file
 readclause.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.i
 .PHONY : readclause.c.i
 
 readclause.s: readclause.c.s
@@ -514,7 +514,7 @@ readclause.s: readclause.c.s
 
 # target to generate assembly for a file
 readclause.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.s
 .PHONY : readclause.c.s
 
 setlengths.o: setlengths.c.o
@@ -522,7 +522,7 @@ setlengths.o: setlengths.c.o
 
 # target to build an object file
 setlengths.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.o
 .PHONY : setlengths.c.o
 
 setlengths.i: setlengths.c.i
@@ -530,7 +530,7 @@ setlengths.i: setlengths.c.i
 
 # target to preprocess a source file
 setlengths.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.i
 .PHONY : setlengths.c.i
 
 setlengths.s: setlengths.c.s
@@ -538,7 +538,7 @@ setlengths.s: setlengths.c.s
 
 # target to generate assembly for a file
 setlengths.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.s
 .PHONY : setlengths.c.s
 
 speech.o: speech.c.o
@@ -546,7 +546,7 @@ speech.o: speech.c.o
 
 # target to build an object file
 speech.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o
 .PHONY : speech.c.o
 
 speech.i: speech.c.i
@@ -554,7 +554,7 @@ speech.i: speech.c.i
 
 # target to preprocess a source file
 speech.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.i
 .PHONY : speech.c.i
 
 speech.s: speech.c.s
@@ -562,7 +562,7 @@ speech.s: speech.c.s
 
 # target to generate assembly for a file
 speech.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.s
 .PHONY : speech.c.s
 
 ssml.o: ssml.c.o
@@ -570,7 +570,7 @@ ssml.o: ssml.c.o
 
 # target to build an object file
 ssml.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.o
 .PHONY : ssml.c.o
 
 ssml.i: ssml.c.i
@@ -578,7 +578,7 @@ ssml.i: ssml.c.i
 
 # target to preprocess a source file
 ssml.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.i
 .PHONY : ssml.c.i
 
 ssml.s: ssml.c.s
@@ -586,7 +586,7 @@ ssml.s: ssml.c.s
 
 # target to generate assembly for a file
 ssml.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.s
 .PHONY : ssml.c.s
 
 synthdata.o: synthdata.c.o
@@ -594,7 +594,7 @@ synthdata.o: synthdata.c.o
 
 # target to build an object file
 synthdata.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.o
 .PHONY : synthdata.c.o
 
 synthdata.i: synthdata.c.i
@@ -602,7 +602,7 @@ synthdata.i: synthdata.c.i
 
 # target to preprocess a source file
 synthdata.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.i
 .PHONY : synthdata.c.i
 
 synthdata.s: synthdata.c.s
@@ -610,7 +610,7 @@ synthdata.s: synthdata.c.s
 
 # target to generate assembly for a file
 synthdata.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.s
 .PHONY : synthdata.c.s
 
 synthesize.o: synthesize.c.o
@@ -618,7 +618,7 @@ synthesize.o: synthesize.c.o
 
 # target to build an object file
 synthesize.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.o
 .PHONY : synthesize.c.o
 
 synthesize.i: synthesize.c.i
@@ -626,7 +626,7 @@ synthesize.i: synthesize.c.i
 
 # target to preprocess a source file
 synthesize.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.i
 .PHONY : synthesize.c.i
 
 synthesize.s: synthesize.c.s
@@ -634,7 +634,7 @@ synthesize.s: synthesize.c.s
 
 # target to generate assembly for a file
 synthesize.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.s
 .PHONY : synthesize.c.s
 
 tr_languages.o: tr_languages.c.o
@@ -642,7 +642,7 @@ tr_languages.o: tr_languages.c.o
 
 # target to build an object file
 tr_languages.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.o
 .PHONY : tr_languages.c.o
 
 tr_languages.i: tr_languages.c.i
@@ -650,7 +650,7 @@ tr_languages.i: tr_languages.c.i
 
 # target to preprocess a source file
 tr_languages.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.i
 .PHONY : tr_languages.c.i
 
 tr_languages.s: tr_languages.c.s
@@ -658,7 +658,7 @@ tr_languages.s: tr_languages.c.s
 
 # target to generate assembly for a file
 tr_languages.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.s
 .PHONY : tr_languages.c.s
 
 translate.o: translate.c.o
@@ -666,7 +666,7 @@ translate.o: translate.c.o
 
 # target to build an object file
 translate.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.o
 .PHONY : translate.c.o
 
 translate.i: translate.c.i
@@ -674,7 +674,7 @@ translate.i: translate.c.i
 
 # target to preprocess a source file
 translate.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.i
 .PHONY : translate.c.i
 
 translate.s: translate.c.s
@@ -682,7 +682,7 @@ translate.s: translate.c.s
 
 # target to generate assembly for a file
 translate.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.s
 .PHONY : translate.c.s
 
 translateword.o: translateword.c.o
@@ -690,7 +690,7 @@ translateword.o: translateword.c.o
 
 # target to build an object file
 translateword.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.o
 .PHONY : translateword.c.o
 
 translateword.i: translateword.c.i
@@ -698,7 +698,7 @@ translateword.i: translateword.c.i
 
 # target to preprocess a source file
 translateword.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.i
 .PHONY : translateword.c.i
 
 translateword.s: translateword.c.s
@@ -706,7 +706,7 @@ translateword.s: translateword.c.s
 
 # target to generate assembly for a file
 translateword.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.s
 .PHONY : translateword.c.s
 
 voices.o: voices.c.o
@@ -714,7 +714,7 @@ voices.o: voices.c.o
 
 # target to build an object file
 voices.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.o
 .PHONY : voices.c.o
 
 voices.i: voices.c.i
@@ -722,7 +722,7 @@ voices.i: voices.c.i
 
 # target to preprocess a source file
 voices.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.i
 .PHONY : voices.c.i
 
 voices.s: voices.c.s
@@ -730,7 +730,7 @@ voices.s: voices.c.s
 
 # target to generate assembly for a file
 voices.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.s
 .PHONY : voices.c.s
 
 # Help Target
@@ -826,6 +826,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

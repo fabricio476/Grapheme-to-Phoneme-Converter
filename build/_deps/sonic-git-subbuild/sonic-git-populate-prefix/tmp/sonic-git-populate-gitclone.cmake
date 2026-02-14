@@ -3,11 +3,11 @@
 
 cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
-if(EXISTS "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt" AND EXISTS "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitinfo.txt" AND
-  "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitinfo.txt")
+if(EXISTS "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt" AND EXISTS "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitinfo.txt" AND
+  "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitinfo.txt")
   message(VERBOSE
     "Avoiding repeated git clone, stamp file is up to date: "
-    "'/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt'"
+    "'/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt'"
   )
   return()
 endif()
@@ -22,12 +22,12 @@ else()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src'")
+  message(FATAL_ERROR "Failed to remove directory: '/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -37,7 +37,7 @@ while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "/bin/git"
             clone --no-checkout --config "advice.detachedHead=false" "https://github.com/waywardgeek/sonic.git" "sonic-git-src"
-    WORKING_DIRECTORY "/mnt/dados/Projeto g2p/meu-g2p/build/_deps"
+    WORKING_DIRECTORY "/mnt/dados/github/fab476/meu-g2p/build/_deps"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
@@ -53,7 +53,7 @@ endif()
 execute_process(
   COMMAND "/bin/git"
           checkout "fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104" --
-  WORKING_DIRECTORY "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src"
+  WORKING_DIRECTORY "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
@@ -66,22 +66,22 @@ if(init_submodules)
   execute_process(
     COMMAND "/bin/git" 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src"
+    WORKING_DIRECTORY "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src'")
+  message(FATAL_ERROR "Failed to update submodules in: '/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E copy "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitinfo.txt" "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitinfo.txt" "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-gitclone-lastrun.txt'")
 endif()

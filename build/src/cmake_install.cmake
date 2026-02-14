@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/dados/Projeto g2p/meu-g2p/src
+# Install script for directory: /mnt/dados/github/fab476/meu-g2p/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/espeak-ng"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/mnt/dados/Projeto g2p/meu-g2p/build/src/espeak-ng")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/mnt/dados/github/fab476/meu-g2p/build/src/espeak-ng")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/espeak-ng" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/espeak-ng")
     file(RPATH_CHANGE
@@ -64,33 +64,33 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES
-    "/mnt/dados/Projeto g2p/meu-g2p/src/include/espeak"
-    "/mnt/dados/Projeto g2p/meu-g2p/src/include/espeak-ng"
+    "/mnt/dados/github/fab476/meu-g2p/src/include/espeak"
+    "/mnt/dados/github/fab476/meu-g2p/src/include/espeak-ng"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE FILE FILES "/mnt/dados/Projeto g2p/meu-g2p/build/src/speak-ng")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE FILE FILES "/mnt/dados/github/fab476/meu-g2p/build/src/speak-ng")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE FILE FILES "/mnt/dados/Projeto g2p/meu-g2p/build/src/espeak")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE FILE FILES "/mnt/dados/github/fab476/meu-g2p/build/src/espeak")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE FILE FILES "/mnt/dados/Projeto g2p/meu-g2p/build/src/speak")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE FILE FILES "/mnt/dados/github/fab476/meu-g2p/build/src/speak")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools/cmake_install.cmake")
-  include("/mnt/dados/Projeto g2p/meu-g2p/build/src/libespeak-ng/cmake_install.cmake")
+  include("/mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools/cmake_install.cmake")
+  include("/mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/mnt/dados/Projeto g2p/meu-g2p/build/src/install_local_manifest.txt"
+  file(WRITE "/mnt/dados/github/fab476/meu-g2p/build/src/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

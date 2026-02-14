@@ -1,8 +1,8 @@
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o: \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/mnemonics.c \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/mnemonics.c \
  /usr/include/stdc-predef.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/build/src/libespeak-ng/include/config.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/string.h \
+ /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng/include/config.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/string.h \
  /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -15,11 +15,11 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/strings.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/strings.h \
  /usr/include/strings.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/espeak-ng/espeak_ng.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/espeak-ng/speak_lib.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/stdio.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/espeak-ng/espeak_ng.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/espeak-ng/speak_lib.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/stdio.h \
  /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
@@ -34,4 +34,4 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/mnemonics.h
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/mnemonics.h

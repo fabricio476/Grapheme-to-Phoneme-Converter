@@ -1,3 +1,3 @@
-/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/CMakeFiles/sonic-git-populate.dir
-/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/CMakeFiles/edit_cache.dir
-/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/CMakeFiles/rebuild_cache.dir
+/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/CMakeFiles/sonic-git-populate.dir
+/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/CMakeFiles/edit_cache.dir
+/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/CMakeFiles/rebuild_cache.dir

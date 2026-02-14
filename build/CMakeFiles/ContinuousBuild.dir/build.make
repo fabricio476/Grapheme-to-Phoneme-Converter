@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/dados/Projeto g2p/meu-g2p"
+CMAKE_SOURCE_DIR = /mnt/dados/github/fab476/meu-g2p
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
+CMAKE_BINARY_DIR = /mnt/dados/github/fab476/meu-g2p/build
 
 # Utility rule file for ContinuousBuild.
 
@@ -85,6 +85,6 @@ CMakeFiles/ContinuousBuild.dir/clean:
 .PHONY : CMakeFiles/ContinuousBuild.dir/clean
 
 CMakeFiles/ContinuousBuild.dir/depend:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/dados/Projeto g2p/meu-g2p" "/mnt/dados/Projeto g2p/meu-g2p" "/mnt/dados/Projeto g2p/meu-g2p/build" "/mnt/dados/Projeto g2p/meu-g2p/build" "/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles/ContinuousBuild.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/dados/github/fab476/meu-g2p /mnt/dados/github/fab476/meu-g2p /mnt/dados/github/fab476/meu-g2p/build /mnt/dados/github/fab476/meu-g2p/build /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles/ContinuousBuild.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ContinuousBuild.dir/depend
 

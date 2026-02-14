@@ -344,24 +344,16 @@ espeak_ng_STATUS SetParameter(int parameter, int value, int relative)
 	return ENS_OK;
 }
 
-static void DoEmbedded2(int *embix)
+// CalcLengths: Stub for G2P-only build.
+// Original implementation calculated phoneme durations for audio synthesis.
+// For G2P we only need phoneme identity, not timing — so this is a no-op.
+void CalcLengths(Translator *tr)
 {
-	// There were embedded commands in the text at this point
-
-	unsigned int word;
-
-	do {
-		word = embedded_list[(*embix)++];
-
-		if ((word & 0x1f) == EMBED_S) {
-			// speed
-			SetEmbedded(word & 0x7f, word >> 8); // adjusts embedded_value[EMBED_S]
-			SetSpeed(1);
-		}
-	} while ((word & 0x80) == 0);
+	(void)tr;
 }
 
-void CalcLengths(Translator *tr)
+#if 0 // Original CalcLengths removed — audio synthesis timing not needed for G2P
+static void CalcLengths_REMOVED(Translator *tr)
 {
 	int ix;
 	int ix2;
@@ -738,6 +730,8 @@ void CalcLengths(Translator *tr)
 		}
 	}
 }
+#endif // Original CalcLengths removed
+
 // Tables of the relative lengths of vowels, depending on the
 // type of the two phonemes that follow
 // indexes are the "length_mod" value for the following phonemes

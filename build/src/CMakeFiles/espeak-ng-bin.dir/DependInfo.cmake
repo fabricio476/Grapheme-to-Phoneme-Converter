@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/dados/Projeto g2p/meu-g2p/src/espeak-ng.c" "src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.o" "gcc" "src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.o.d"
+  "/mnt/dados/github/fab476/meu-g2p/src/espeak-ng.c" "src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.o" "gcc" "src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.o.d"
   "" "src/espeak-ng" "gcc" "src/CMakeFiles/espeak-ng-bin.dir/link.d"
   )
 

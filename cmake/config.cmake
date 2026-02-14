@@ -13,10 +13,4 @@ option(USE_LIBPCAUDIO "Use libPcAudio for sound output" ${HAVE_LIBPCAUDIO})
 
 option(USE_KLATT "Use klatt for speech synthesis" OFF)
 option(USE_SPEECHPLAYER "Use speech-player for speech synthesis" OFF)
-if (HAVE_PTHREAD)
-  option(USE_ASYNC "Support asynchronous speech synthesis" OFF)
-else()
-  set(USE_ASYNC OFF)
-endif()
-
 option(ESPEAK_COMPAT "Install compat binary symlinks" ON)

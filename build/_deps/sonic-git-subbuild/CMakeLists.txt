@@ -28,8 +28,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(sonic-git-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/waywardgeek/sonic.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104"
-                    SOURCE_DIR          "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src"
-                    BINARY_DIR          "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-build"
+                    SOURCE_DIR          "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src"
+                    BINARY_DIR          "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

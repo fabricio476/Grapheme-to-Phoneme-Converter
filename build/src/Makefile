@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/dados/Projeto g2p/meu-g2p"
+CMAKE_SOURCE_DIR = /mnt/dados/github/fab476/meu-g2p
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
+CMAKE_BINARY_DIR = /mnt/dados/github/fab476/meu-g2p/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /mnt/dados/github/fab476/meu-g2p/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/dados/Projeto\ g2p/meu-g2p/build/CPackSourceConfig.cmake
+	cd /mnt/dados/github/fab476/meu-g2p/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/dados/github/fab476/meu-g2p/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -162,14 +162,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" "/mnt/dados/Projeto g2p/meu-g2p/build/src//CMakeFiles/progress.marks"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" 0
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles /mnt/dados/github/fab476/meu-g2p/build/src//CMakeFiles/progress.marks
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -178,22 +178,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/espeak-ng-bin.dir/rule:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/espeak-ng-bin.dir/rule
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/espeak-ng-bin.dir/rule
 .PHONY : src/CMakeFiles/espeak-ng-bin.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,12 @@ espeak-ng-bin: src/CMakeFiles/espeak-ng-bin.dir/rule
 
 # fast build rule for target.
 espeak-ng-bin/fast:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/build
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/build
 .PHONY : espeak-ng-bin/fast
 
 # Convenience name for target.
 src/CMakeFiles/speak-ng.dir/rule:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/speak-ng.dir/rule
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/speak-ng.dir/rule
 .PHONY : src/CMakeFiles/speak-ng.dir/rule
 
 # Convenience name for target.
@@ -216,7 +216,7 @@ speak-ng: src/CMakeFiles/speak-ng.dir/rule
 
 # fast build rule for target.
 speak-ng/fast:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/speak-ng.dir/build.make src/CMakeFiles/speak-ng.dir/build
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/speak-ng.dir/build.make src/CMakeFiles/speak-ng.dir/build
 .PHONY : speak-ng/fast
 
 espeak-ng.o: espeak-ng.c.o
@@ -224,7 +224,7 @@ espeak-ng.o: espeak-ng.c.o
 
 # target to build an object file
 espeak-ng.c.o:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.o
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.o
 .PHONY : espeak-ng.c.o
 
 espeak-ng.i: espeak-ng.c.i
@@ -232,7 +232,7 @@ espeak-ng.i: espeak-ng.c.i
 
 # target to preprocess a source file
 espeak-ng.c.i:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.i
 .PHONY : espeak-ng.c.i
 
 espeak-ng.s: espeak-ng.c.s
@@ -240,7 +240,7 @@ espeak-ng.s: espeak-ng.c.s
 
 # target to generate assembly for a file
 espeak-ng.c.s:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.s
 .PHONY : espeak-ng.c.s
 
 # Help Target
@@ -274,6 +274,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

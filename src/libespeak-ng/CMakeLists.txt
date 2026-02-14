@@ -66,16 +66,6 @@ endif()
 
 target_compile_definitions(espeak-ng PRIVATE "PATH_ESPEAK_DATA=\"${CMAKE_INSTALL_PREFIX}/share/espeak-ng-data\"")
 
-if (USE_ASYNC)
-  target_sources(espeak-ng PRIVATE
-    event.c
-    fifo.c
-    espeak_command.c
-  )
-endif(USE_ASYNC)
-
-
-
 if (HAVE_PTHREAD)
   target_link_libraries(espeak-ng PRIVATE Threads::Threads)
 endif()

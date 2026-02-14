@@ -47,9 +47,7 @@
 #include "speech.h"
 #include "common.h"               // for GetFileLength
 #include "dictionary.h"           // for GetTranslatedPhonemeString, strncpy0
-#include "espeak_command.h"       // for delete_espeak_command, SetParameter
-#include "event.h"                // for event_declare, event_clear_all, eve...
-#include "fifo.h"                 // for fifo_add_command, fifo_add_commands
+#include "setlengths.h"           // for SetParameter, SetSpeed
 #include "langopts.h"             // for LoadConfig
 #include "readclause.h"           // for PARAM_STACK, param_stack
 #include "synthdata.h"            // for FreePhData, LoadPhData
@@ -147,8 +145,6 @@ void SetEmbedded(int control, int value) {
 
 
 static unsigned char *outbuf = NULL;
-static int outbuf_size = 0;
-static unsigned char *out_start;
 
 espeak_EVENT *event_list = NULL;
 static int event_list_ix = 0;
@@ -159,11 +155,18 @@ static unsigned int my_unique_identifier = 0;
 static void *my_user_data = NULL;
 static espeak_ng_OUTPUT_MODE my_mode = ENOUTPUT_MODE_SYNCHRONOUS;
 static int out_samplerate = 0;
-static int voice_samplerate = 22050;
-static const int min_buffer_length = 60; // minimum buffer length in ms
 static espeak_ng_STATUS err = ENS_OK;
 
 static t_espeak_callback *synth_callback = NULL;
+
+// Forward declarations for sync_espeak functions
+espeak_ng_STATUS sync_espeak_Synth(unsigned int unique_identifier, const void *text,
+	unsigned int position, espeak_POSITION_TYPE position_type, unsigned int end_position, unsigned int flags, void *user_data);
+espeak_ng_STATUS sync_espeak_Synth_Mark(unsigned int unique_identifier, const void *text,
+	const char *index_mark, unsigned int end_position, unsigned int flags, void *user_data);
+espeak_ng_STATUS sync_espeak_Key(const char *key);
+espeak_ng_STATUS sync_espeak_Char(wchar_t character);
+void sync_espeak_SetPunctuationList(const wchar_t *punctlist);
 
 char path_home[N_PATH_HOME]; // this is the espeak-ng-data directory
 extern int saved_parameters[N_SPEECH_PARAM]; // Parameters saved on synthesis start
@@ -189,7 +192,8 @@ static int check_data_path(const char *path, int allow_directory)
 
 ESPEAK_NG_API espeak_ng_STATUS espeak_ng_InitializeOutput(espeak_ng_OUTPUT_MODE output_mode, int buffer_length, const char *device)
 {
-	(void)device; 
+	(void)device;
+	(void)buffer_length;
 	my_mode = output_mode;
 	out_samplerate = 0;
 	return ENS_OK;
@@ -318,6 +322,7 @@ ESPEAK_NG_API int espeak_ng_GetSampleRate(void)
 
 static espeak_ng_STATUS Synthesize(unsigned int unique_identifier, const void *text, int flags)
 {
+	(void)unique_identifier;
 	// Fill the buffer with output sound
 	// Removed logic
 
@@ -353,6 +358,7 @@ static espeak_ng_STATUS Synthesize(unsigned int unique_identifier, const void *t
 
 void MarkerEvent(int type, unsigned int char_position, int value, int value2, unsigned char *out_ptr)
 {
+	(void)out_ptr;
 	// type: 1=word, 2=sentence, 3=named mark, 4=play audio, 5=end, 7=phoneme
 	espeak_EVENT *ep;
 	

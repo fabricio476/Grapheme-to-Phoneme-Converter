@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/dados/Projeto g2p/meu-g2p"
+CMAKE_SOURCE_DIR = /mnt/dados/github/fab476/meu-g2p
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
+CMAKE_BINARY_DIR = /mnt/dados/github/fab476/meu-g2p/build
 
 # Include any dependencies generated for this target.
 include src/ucd-tools/CMakeFiles/ucd.dir/depend.make
@@ -73,88 +73,88 @@ src/ucd-tools/CMakeFiles/ucd.dir/codegen:
 .PHONY : src/ucd-tools/CMakeFiles/ucd.dir/codegen
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o: src/ucd-tools/CMakeFiles/ucd.dir/flags.make
-src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o: /mnt/dados/Projeto\ g2p/meu-g2p/src/ucd-tools/src/case.c
+src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o: /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/case.c
 src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o: src/ucd-tools/CMakeFiles/ucd.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o -MF CMakeFiles/ucd.dir/src/case.c.o.d -o CMakeFiles/ucd.dir/src/case.c.o -c "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/case.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o"
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.o -MF CMakeFiles/ucd.dir/src/case.c.o.d -o CMakeFiles/ucd.dir/src/case.c.o -c /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/case.c
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ucd.dir/src/case.c.i"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/case.c" > CMakeFiles/ucd.dir/src/case.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/case.c > CMakeFiles/ucd.dir/src/case.c.i
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/case.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ucd.dir/src/case.c.s"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/case.c" -o CMakeFiles/ucd.dir/src/case.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/case.c -o CMakeFiles/ucd.dir/src/case.c.s
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o: src/ucd-tools/CMakeFiles/ucd.dir/flags.make
-src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o: /mnt/dados/Projeto\ g2p/meu-g2p/src/ucd-tools/src/categories.c
+src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o: /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/categories.c
 src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o: src/ucd-tools/CMakeFiles/ucd.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o -MF CMakeFiles/ucd.dir/src/categories.c.o.d -o CMakeFiles/ucd.dir/src/categories.c.o -c "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/categories.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o"
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.o -MF CMakeFiles/ucd.dir/src/categories.c.o.d -o CMakeFiles/ucd.dir/src/categories.c.o -c /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/categories.c
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ucd.dir/src/categories.c.i"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/categories.c" > CMakeFiles/ucd.dir/src/categories.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/categories.c > CMakeFiles/ucd.dir/src/categories.c.i
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/categories.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ucd.dir/src/categories.c.s"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/categories.c" -o CMakeFiles/ucd.dir/src/categories.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/categories.c -o CMakeFiles/ucd.dir/src/categories.c.s
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o: src/ucd-tools/CMakeFiles/ucd.dir/flags.make
-src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o: /mnt/dados/Projeto\ g2p/meu-g2p/src/ucd-tools/src/ctype.c
+src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o: /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/ctype.c
 src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o: src/ucd-tools/CMakeFiles/ucd.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o -MF CMakeFiles/ucd.dir/src/ctype.c.o.d -o CMakeFiles/ucd.dir/src/ctype.c.o -c "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/ctype.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o"
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.o -MF CMakeFiles/ucd.dir/src/ctype.c.o.d -o CMakeFiles/ucd.dir/src/ctype.c.o -c /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/ctype.c
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ucd.dir/src/ctype.c.i"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/ctype.c" > CMakeFiles/ucd.dir/src/ctype.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/ctype.c > CMakeFiles/ucd.dir/src/ctype.c.i
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/ctype.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ucd.dir/src/ctype.c.s"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/ctype.c" -o CMakeFiles/ucd.dir/src/ctype.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/ctype.c -o CMakeFiles/ucd.dir/src/ctype.c.s
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o: src/ucd-tools/CMakeFiles/ucd.dir/flags.make
-src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o: /mnt/dados/Projeto\ g2p/meu-g2p/src/ucd-tools/src/proplist.c
+src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o: /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/proplist.c
 src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o: src/ucd-tools/CMakeFiles/ucd.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o -MF CMakeFiles/ucd.dir/src/proplist.c.o.d -o CMakeFiles/ucd.dir/src/proplist.c.o -c "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/proplist.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o"
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.o -MF CMakeFiles/ucd.dir/src/proplist.c.o.d -o CMakeFiles/ucd.dir/src/proplist.c.o -c /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/proplist.c
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ucd.dir/src/proplist.c.i"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/proplist.c" > CMakeFiles/ucd.dir/src/proplist.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/proplist.c > CMakeFiles/ucd.dir/src/proplist.c.i
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/proplist.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ucd.dir/src/proplist.c.s"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/proplist.c" -o CMakeFiles/ucd.dir/src/proplist.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/proplist.c -o CMakeFiles/ucd.dir/src/proplist.c.s
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o: src/ucd-tools/CMakeFiles/ucd.dir/flags.make
-src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o: /mnt/dados/Projeto\ g2p/meu-g2p/src/ucd-tools/src/scripts.c
+src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o: /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/scripts.c
 src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o: src/ucd-tools/CMakeFiles/ucd.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o -MF CMakeFiles/ucd.dir/src/scripts.c.o.d -o CMakeFiles/ucd.dir/src/scripts.c.o -c "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/scripts.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o"
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o -MF CMakeFiles/ucd.dir/src/scripts.c.o.d -o CMakeFiles/ucd.dir/src/scripts.c.o -c /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/scripts.c
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ucd.dir/src/scripts.c.i"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/scripts.c" > CMakeFiles/ucd.dir/src/scripts.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/scripts.c > CMakeFiles/ucd.dir/src/scripts.c.i
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ucd.dir/src/scripts.c.s"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/scripts.c" -o CMakeFiles/ucd.dir/src/scripts.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/scripts.c -o CMakeFiles/ucd.dir/src/scripts.c.s
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o: src/ucd-tools/CMakeFiles/ucd.dir/flags.make
-src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o: /mnt/dados/Projeto\ g2p/meu-g2p/src/ucd-tools/src/tostring.c
+src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o: /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/tostring.c
 src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o: src/ucd-tools/CMakeFiles/ucd.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o -MF CMakeFiles/ucd.dir/src/tostring.c.o.d -o CMakeFiles/ucd.dir/src/tostring.c.o -c "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/tostring.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o"
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o -MF CMakeFiles/ucd.dir/src/tostring.c.o.d -o CMakeFiles/ucd.dir/src/tostring.c.o -c /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/tostring.c
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ucd.dir/src/tostring.c.i"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/tostring.c" > CMakeFiles/ucd.dir/src/tostring.c.i
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/tostring.c > CMakeFiles/ucd.dir/src/tostring.c.i
 
 src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ucd.dir/src/tostring.c.s"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/tostring.c" -o CMakeFiles/ucd.dir/src/tostring.c.s
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/tostring.c -o CMakeFiles/ucd.dir/src/tostring.c.s
 
 # Object files for target ucd
 ucd_OBJECTS = \
@@ -176,19 +176,19 @@ src/ucd-tools/libucd.a: src/ucd-tools/CMakeFiles/ucd.dir/src/scripts.c.o
 src/ucd-tools/libucd.a: src/ucd-tools/CMakeFiles/ucd.dir/src/tostring.c.o
 src/ucd-tools/libucd.a: src/ucd-tools/CMakeFiles/ucd.dir/build.make
 src/ucd-tools/libucd.a: src/ucd-tools/CMakeFiles/ucd.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking C static library libucd.a"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && $(CMAKE_COMMAND) -P CMakeFiles/ucd.dir/cmake_clean_target.cmake
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ucd.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C static library libucd.a"
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && $(CMAKE_COMMAND) -P CMakeFiles/ucd.dir/cmake_clean_target.cmake
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ucd.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/ucd-tools/CMakeFiles/ucd.dir/build: src/ucd-tools/libucd.a
 .PHONY : src/ucd-tools/CMakeFiles/ucd.dir/build
 
 src/ucd-tools/CMakeFiles/ucd.dir/clean:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" && $(CMAKE_COMMAND) -P CMakeFiles/ucd.dir/cmake_clean.cmake
+	cd /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools && $(CMAKE_COMMAND) -P CMakeFiles/ucd.dir/cmake_clean.cmake
 .PHONY : src/ucd-tools/CMakeFiles/ucd.dir/clean
 
 src/ucd-tools/CMakeFiles/ucd.dir/depend:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/dados/Projeto g2p/meu-g2p" "/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools" "/mnt/dados/Projeto g2p/meu-g2p/build" "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools" "/mnt/dados/Projeto g2p/meu-g2p/build/src/ucd-tools/CMakeFiles/ucd.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/dados/github/fab476/meu-g2p /mnt/dados/github/fab476/meu-g2p/src/ucd-tools /mnt/dados/github/fab476/meu-g2p/build /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools /mnt/dados/github/fab476/meu-g2p/build/src/ucd-tools/CMakeFiles/ucd.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/ucd-tools/CMakeFiles/ucd.dir/depend
 

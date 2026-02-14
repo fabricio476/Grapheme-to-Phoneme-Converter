@@ -396,26 +396,9 @@ extern unsigned int embedded_list[];
 
 extern const unsigned char env_fall[128];
 
-// queue of commands for wavegen
-#define WCMD_KLATT  1
-#define WCMD_KLATT2 2
-#define WCMD_SPECT  3
-#define WCMD_SPECT2 4
-#define WCMD_PAUSE  5
-#define WCMD_WAVE    6
-#define WCMD_WAVE2   7
-#define WCMD_AMPLITUDE 8
-#define WCMD_PITCH  9
-#define WCMD_MARKER 10
-#define WCMD_VOICE   11
-#define WCMD_EMBEDDED 12
-#define WCMD_MBROLA_DATA 13
-#define WCMD_FMT_AMPLITUDE 14
-#define WCMD_SONIC_SPEED 15
-#define WCMD_PHONEME_ALIGNMENT 16
-
+// Wavegen queue — kept as stubs for compatibility
 #define N_WCMDQ   170
-#define MIN_WCMDQ  25   // need this many free entries before adding new phoneme
+#define MIN_WCMDQ  25
 
 extern intptr_t wcmdq[N_WCMDQ][4];
 extern int wcmdq_head;
@@ -433,17 +416,15 @@ extern int echo_amp;
 extern short echo_buf[N_ECHO_BUF];
 
 void SynthesizeInit(void);
-int  Generate(PHONEME_LIST *phoneme_list, int *n_ph, bool resume);
 int  SpeakNextClause(int control);
 void SetSpeed(int control);
 void SetEmbedded(int control, int value);
-int FormantTransition2(frameref_t *seq, int *n_frames, unsigned int data1, unsigned int data2, PHONEME_TAB *other_ph, int which);
+void DoSonicSpeed(int value);
+int  FormantTransition2(frameref_t *seq, int *n_frames,
+     unsigned int data1, unsigned int data2,
+     PHONEME_TAB *other_ph, int which);
 
 void Write4Bytes(FILE *f, int value);
-
-#if USE_LIBSONIC
-void DoSonicSpeed(int value);
-#endif
 
 #define ENV_LEN  128    // length of pitch envelopes
 #define PITCHfall   0  // standard pitch envelopes
@@ -462,8 +443,6 @@ extern const int version_phdata;
 void DoEmbedded(int *embix, int sourceix);
 void DoMarker(int type, int char_posn, int length, int value);
 void DoPhonemeMarker(int type, int char_posn, int length, char *name);
-int DoSample3(PHONEME_DATA *phdata, int length_mod, int amp);
-int DoSpect2(PHONEME_TAB *this_ph, int which, FMT_PARAMS *fmt_params,  PHONEME_LIST *plist, int modulation);
 int PauseLength(int pause, int control);
 const char *WordToString(char buf[5], unsigned int word);
 

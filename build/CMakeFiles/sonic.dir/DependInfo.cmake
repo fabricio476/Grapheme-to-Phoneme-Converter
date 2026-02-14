@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src/sonic.c" "CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o" "gcc" "CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o.d"
+  "/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src/sonic.c" "CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o" "gcc" "CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

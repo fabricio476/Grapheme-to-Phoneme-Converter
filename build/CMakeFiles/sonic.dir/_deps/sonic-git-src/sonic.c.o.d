@@ -1,7 +1,7 @@
 CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o: \
- /mnt/dados/Projeto\ g2p/meu-g2p/build/_deps/sonic-git-src/sonic.c \
+ /mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src/sonic.c \
  /usr/include/stdc-predef.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/build/_deps/sonic-git-src/sonic.h \
+ /mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src/sonic.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/syslimits.h \
  /usr/include/limits.h \

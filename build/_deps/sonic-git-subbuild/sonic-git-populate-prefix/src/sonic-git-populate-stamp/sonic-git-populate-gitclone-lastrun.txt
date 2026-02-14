@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/tmp/sonic-git-populate-gitclone.cmake
-source_dir=/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src
-work_dir=/mnt/dados/Projeto g2p/meu-g2p/build/_deps
+command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/tmp/sonic-git-populate-gitclone.cmake
+source_dir=/mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src
+work_dir=/mnt/dados/github/fab476/meu-g2p/build/_deps
 repository=https://github.com/waywardgeek/sonic.git
 remote=origin
 init_submodules=TRUE

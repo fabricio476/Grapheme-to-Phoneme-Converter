@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/dados/Projeto g2p/meu-g2p"
+CMAKE_SOURCE_DIR = /mnt/dados/github/fab476/meu-g2p
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
+CMAKE_BINARY_DIR = /mnt/dados/github/fab476/meu-g2p/build
 
 # Utility rule file for speak-ng.
 
@@ -67,10 +67,10 @@ include src/CMakeFiles/speak-ng.dir/compiler_depend.make
 include src/CMakeFiles/speak-ng.dir/progress.make
 
 src/CMakeFiles/speak-ng: src/espeak-ng
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Link espeak-ng to compat names"
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src" && /usr/bin/cmake -E create_symlink espeak-ng /mnt/dados/Projeto\ g2p/meu-g2p/build/src/speak-ng
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src" && /usr/bin/cmake -E create_symlink espeak-ng /mnt/dados/Projeto\ g2p/meu-g2p/build/src/espeak
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src" && /usr/bin/cmake -E create_symlink espeak-ng /mnt/dados/Projeto\ g2p/meu-g2p/build/src/speak
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Link espeak-ng to compat names"
+	cd /mnt/dados/github/fab476/meu-g2p/build/src && /usr/bin/cmake -E create_symlink espeak-ng /mnt/dados/github/fab476/meu-g2p/build/src/speak-ng
+	cd /mnt/dados/github/fab476/meu-g2p/build/src && /usr/bin/cmake -E create_symlink espeak-ng /mnt/dados/github/fab476/meu-g2p/build/src/espeak
+	cd /mnt/dados/github/fab476/meu-g2p/build/src && /usr/bin/cmake -E create_symlink espeak-ng /mnt/dados/github/fab476/meu-g2p/build/src/speak
 
 src/CMakeFiles/speak-ng.dir/codegen:
 .PHONY : src/CMakeFiles/speak-ng.dir/codegen
@@ -84,10 +84,10 @@ src/CMakeFiles/speak-ng.dir/build: speak-ng
 .PHONY : src/CMakeFiles/speak-ng.dir/build
 
 src/CMakeFiles/speak-ng.dir/clean:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build/src" && $(CMAKE_COMMAND) -P CMakeFiles/speak-ng.dir/cmake_clean.cmake
+	cd /mnt/dados/github/fab476/meu-g2p/build/src && $(CMAKE_COMMAND) -P CMakeFiles/speak-ng.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/speak-ng.dir/clean
 
 src/CMakeFiles/speak-ng.dir/depend:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/dados/Projeto g2p/meu-g2p" "/mnt/dados/Projeto g2p/meu-g2p/src" "/mnt/dados/Projeto g2p/meu-g2p/build" "/mnt/dados/Projeto g2p/meu-g2p/build/src" "/mnt/dados/Projeto g2p/meu-g2p/build/src/CMakeFiles/speak-ng.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/dados/github/fab476/meu-g2p /mnt/dados/github/fab476/meu-g2p/src /mnt/dados/github/fab476/meu-g2p/build /mnt/dados/github/fab476/meu-g2p/build/src /mnt/dados/github/fab476/meu-g2p/build/src/CMakeFiles/speak-ng.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/speak-ng.dir/depend
 

@@ -4,7 +4,7 @@
 # compile C with /bin/cc
 C_DEFINES = -DLIBESPEAK_NG_EXPORT=1
 
-C_INCLUDES = -I"/mnt/dados/Projeto g2p/meu-g2p/src/include" -I"/mnt/dados/Projeto g2p/meu-g2p/src/include/compat" -I"/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/include" -I"/mnt/dados/Projeto g2p/meu-g2p/build/src/libespeak-ng/include"
+C_INCLUDES = -I/mnt/dados/github/fab476/meu-g2p/src/include -I/mnt/dados/github/fab476/meu-g2p/src/include/compat -I/mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/include -I/mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng/include
 
 C_FLAGS = 
 

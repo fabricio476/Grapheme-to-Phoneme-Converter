@@ -4,7 +4,6 @@
 #define HAVE_SYS_ENDIAN_H 0
 #define HAVE_ISWBLANK 1
 
-#define USE_ASYNC 0
 #define USE_KLATT 0
 #define USE_LIBPCAUDIO 0
 #define USE_LIBSONIC 1

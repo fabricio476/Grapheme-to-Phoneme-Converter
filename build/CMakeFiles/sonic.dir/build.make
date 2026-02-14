@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/dados/Projeto g2p/meu-g2p"
+CMAKE_SOURCE_DIR = /mnt/dados/github/fab476/meu-g2p
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/dados/Projeto g2p/meu-g2p/build"
+CMAKE_BINARY_DIR = /mnt/dados/github/fab476/meu-g2p/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sonic.dir/depend.make
@@ -75,16 +75,16 @@ CMakeFiles/sonic.dir/codegen:
 CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o: CMakeFiles/sonic.dir/flags.make
 CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o: _deps/sonic-git-src/sonic.c
 CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o: CMakeFiles/sonic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o"
-	/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o -MF CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o.d -o CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o -c "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src/sonic.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o"
+	/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o -MF CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o.d -o CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o -c /mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src/sonic.c
 
 CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.i"
-	/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src/sonic.c" > CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.i
+	/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src/sonic.c > CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.i
 
 CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.s"
-	/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-src/sonic.c" -o CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.s
+	/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/build/_deps/sonic-git-src/sonic.c -o CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.s
 
 sonic: CMakeFiles/sonic.dir/_deps/sonic-git-src/sonic.c.o
 sonic: CMakeFiles/sonic.dir/build.make
@@ -99,6 +99,6 @@ CMakeFiles/sonic.dir/clean:
 .PHONY : CMakeFiles/sonic.dir/clean
 
 CMakeFiles/sonic.dir/depend:
-	cd "/mnt/dados/Projeto g2p/meu-g2p/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/dados/Projeto g2p/meu-g2p" "/mnt/dados/Projeto g2p/meu-g2p" "/mnt/dados/Projeto g2p/meu-g2p/build" "/mnt/dados/Projeto g2p/meu-g2p/build" "/mnt/dados/Projeto g2p/meu-g2p/build/CMakeFiles/sonic.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd /mnt/dados/github/fab476/meu-g2p/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/dados/github/fab476/meu-g2p /mnt/dados/github/fab476/meu-g2p /mnt/dados/github/fab476/meu-g2p/build /mnt/dados/github/fab476/meu-g2p/build /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles/sonic.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/sonic.dir/depend
 

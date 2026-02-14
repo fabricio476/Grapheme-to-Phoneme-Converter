@@ -1,7 +1,7 @@
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o: \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/speech.c \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/speech.c \
  /usr/include/stdc-predef.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/build/src/libespeak-ng/include/config.h \
+ /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng/include/config.h \
  /usr/include/assert.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -23,14 +23,14 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o: \
  /usr/include/locale.h /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/stdint.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/stdint.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/stdio.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/stdio.h \
  /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
@@ -49,7 +49,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/endian.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/endian.h \
  /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
  /usr/include/x86_64-linux-gnu/sys/select.h \
@@ -65,44 +65,42 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/string.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/string.h \
  /usr/include/string.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/strings.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/strings.h \
  /usr/include/strings.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/sys/stat.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/sys/stat.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/unistd.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/unistd.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/compat/wchar.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/compat/wchar.h \
  /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/ucd-tools/src/include/ucd/ucd.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/espeak-ng/espeak_ng.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/espeak-ng/speak_lib.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/include/espeak-ng/encoding.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/speech.h \
+ /mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/include/ucd/ucd.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/espeak-ng/espeak_ng.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/espeak-ng/speak_lib.h \
+ /mnt/dados/github/fab476/meu-g2p/src/include/espeak-ng/encoding.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/speech.h \
  /usr/include/linux/limits.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/common.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/translate.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/dictionary.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/phoneme.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/synthesize.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/espeak_command.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/event.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/fifo.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/langopts.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/readclause.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/synthdata.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/voice.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/mnemonics.h \
- /mnt/dados/Projeto\ g2p/meu-g2p/src/libespeak-ng/wavegen.h
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/common.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/translate.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/dictionary.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/phoneme.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthesize.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/setlengths.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/langopts.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/readclause.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthdata.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/voice.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/mnemonics.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/wavegen.h

@@ -4,7 +4,7 @@
 # compile C with /bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I"/mnt/dados/Projeto g2p/meu-g2p/src/ucd-tools/src/include"
+C_INCLUDES = -I/mnt/dados/github/fab476/meu-g2p/src/ucd-tools/src/include
 
 C_FLAGS = -fPIC
 
