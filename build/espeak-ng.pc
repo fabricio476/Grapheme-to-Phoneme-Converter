@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=/usr/local
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: espeak-ng
+Description: G2P converter based on espeak-ng
+Version: 1.52.0.1
+Libs: -L${libdir} -lespeak-ng
+Cflags: -I${includedir}

@@ -1,0 +1,18 @@
+# Build directory
+build/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Dependências baixadas
+_deps/
+
+# Arquivos temporários
+*.o
+*.a
+*.so
+*.log
+

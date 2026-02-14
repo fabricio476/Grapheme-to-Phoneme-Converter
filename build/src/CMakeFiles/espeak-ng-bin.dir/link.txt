@@ -1,0 +1,1 @@
+/bin/cc -Wl,--dependency-file=CMakeFiles/espeak-ng-bin.dir/link.d "CMakeFiles/espeak-ng-bin.dir/espeak-ng.c.o" -o espeak-ng  -Wl,-rpath,:::::::::::::: libespeak-ng/libespeak-ng.a -lm ucd-tools/libucd.a

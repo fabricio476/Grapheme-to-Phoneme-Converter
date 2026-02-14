@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @PACKAGE_NAME@
+Description: G2P converter based on espeak-ng
+Version: @VERSION@
+Libs: -L${libdir} -lespeak-ng
+Cflags: -I${includedir}

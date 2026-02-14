@@ -1,0 +1,14 @@
+# Target labels
+ sonic-git-populate
+# Source files and their labels
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/CMakeFiles/sonic-git-populate
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/CMakeFiles/sonic-git-populate.rule
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/CMakeFiles/sonic-git-populate-complete.rule
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-build.rule
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-configure.rule
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-download.rule
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-install.rule
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-mkdir.rule
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-patch.rule
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-test.rule
+/mnt/dados/Projeto g2p/meu-g2p/build/_deps/sonic-git-subbuild/sonic-git-populate-prefix/src/sonic-git-populate-stamp/sonic-git-populate-update.rule
