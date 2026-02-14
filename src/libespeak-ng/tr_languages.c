@@ -32,8 +32,12 @@
 #include <espeak-ng/encoding.h>
 
 #include "common.h"
-#include "setlengths.h"          // for SetLengthMods
+#include "phoneme.h"             // for MNEM_TAB (merged mnemonics)
+#include "stubs.h"               // for soundicon_tab, n_soundicon_tab
+#include "speech.h"              // for path_home, PATHSEP
+#include "synthdata.h"           // for n_tunes, tunes
 #include "translate.h"           // for Translator, LANGUAGE_OPTIONS, L, NUM...
+#include "voice.h"               // for ReadNumbers, Read8Numbers, ...
 
 // start of unicode pages for character sets
 #define OFFSET_GREEK    0x380
@@ -1702,3 +1706,174 @@ static void Translator_Russian(Translator *tr)
 	tr->langopts.max_digits = 32;
 	tr->langopts.max_initial_consonants = 5;
 }		
+
+// =================================================================
+// Language options loading (merged from langopts.c)
+// =================================================================
+
+// Global definitions for soundicon (stub - soundicon.c removed)
+SOUND_ICON soundicon_tab[N_SOUNDICON_TAB];
+int n_soundicon_tab = 0;
+
+static int CheckTranslator(Translator *tr, const MNEM_TAB *keyword_tab, int key);
+static int LookupTune(const char *name);
+
+void LoadLanguageOptions(Translator *translator, int key, char *keyValue) {
+	if (CheckTranslator(translator, langopts_tab, key) != 0) {
+		return;
+	}
+
+	int ix;
+	int n;
+
+	switch (key) {
+	case V_DICTMIN:
+		if (sscanf(keyValue, "%d", &n) == 1)
+			translator->dict_min_size = n;
+		break;
+
+	case V_DICTRULES:
+		ReadNumbers(keyValue, &translator->dict_condition, 32, langopts_tab, key);
+		break;
+
+	case V_INTONATION:
+		sscanf(keyValue, "%d", &option_tone_flags);
+		if ((option_tone_flags & 0xff) != 0) {
+			translator->langopts.intonation_group = option_tone_flags & 0xff;
+		}
+		break;
+
+	case V_NUMBERS:
+		while (*keyValue != 0) {
+			while (isspace(*keyValue)) keyValue++;
+			if ((n = atoi(keyValue)) > 0) {
+				keyValue++;
+				if (n < 32)
+					translator->langopts.numbers |= (1 << n);
+				else if (n < 64)
+					translator->langopts.numbers2 |= (1 << (n-32));
+				else
+					fprintf(stderr, "numbers: Bad option number %d\n", n);
+			}
+			while (isalnum(*keyValue)) keyValue++;
+		}
+		ProcessLanguageOptions(&(translator->langopts));
+		break;
+
+	case V_LOWERCASE_SENTENCE:
+		translator->langopts.lowercase_sentence = true;
+		break;
+
+	case V_SPELLINGSTRESS:
+		translator->langopts.spelling_stress = true;
+		break;
+
+	case V_STRESSADD: {
+		int stress_add_set = 0;
+		int stress_add[8];
+		stress_add_set = Read8Numbers(keyValue, stress_add);
+		for (ix = 0; ix < stress_add_set; ix++)
+			translator->stress_lengths[ix] += stress_add[ix];
+		break;
+	}
+
+	case V_STRESSAMP: {
+		int stress_amps_set = 0;
+		int stress_amps[8];
+		stress_amps_set = Read8Numbers(keyValue, stress_amps);
+		for (ix = 0; ix < stress_amps_set; ix++)
+			translator->stress_amps[ix] = stress_amps[ix];
+		break;
+	}
+
+	case V_STRESSLENGTH: {
+		int stress_lengths_set = 0;
+		int stress_lengths[8];
+		stress_lengths_set = Read8Numbers(keyValue, stress_lengths);
+		for (ix = 0; ix < stress_lengths_set; ix++)
+			translator->stress_lengths[ix] = stress_lengths[ix];
+		break;
+	}
+
+	case V_STRESSOPT:
+		ReadNumbers(keyValue, &translator->langopts.stress_flags, 32, langopts_tab, key);
+		break;
+
+	case V_STRESSRULE:
+		sscanf(keyValue, "%d %d %d", &translator->langopts.stress_rule,
+		       &translator->langopts.unstressed_wd1,
+		       &translator->langopts.unstressed_wd2);
+		break;
+
+	case V_TUNES: {
+		char names[6][40] = { {0}, {0}, {0}, {0}, {0}, {0} };
+		n = sscanf(keyValue, "%s %s %s %s %s %s", names[0], names[1], names[2], names[3], names[4], names[5]);
+		translator->langopts.intonation_group = 0;
+
+		int value;
+		for (ix = 0; ix < n; ix++) {
+			if (strcmp(names[ix], "NULL") == 0)
+				continue;
+			if ((value = LookupTune(names[ix])) < 0)
+				fprintf(stderr, "Unknown tune '%s'\n", names[ix]);
+			else
+				translator->langopts.tunes[ix] = value;
+		}
+		break;
+	}
+
+	case V_WORDGAP:
+		sscanf(keyValue, "%d %d", &translator->langopts.word_gap, &translator->langopts.vowel_pause);
+		break;
+
+	default:
+		if ((key & 0xff00) == 0x100)
+			sscanf(keyValue, "%d", &translator->langopts.param[key & 0xff]);
+		break;
+	}
+}
+
+void LoadConfig(void) {
+	char buf[sizeof(path_home)+10];
+	FILE *f;
+	int ix;
+	char c1;
+	char string[200];
+
+	sprintf(buf, "%s%c%s", path_home, PATHSEP, "config");
+	if ((f = fopen(buf, "r")) == NULL)
+		return;
+
+	while (fgets(buf, sizeof(buf), f) != NULL) {
+		if (buf[0] == '/') continue;
+
+		if (memcmp(buf, "tone", 4) == 0)
+			ReadTonePoints(&buf[5], tone_points);
+		else if (memcmp(buf, "soundicon", 9) == 0) {
+			ix = sscanf(&buf[10], "_%c %s", &c1, string);
+			if (ix == 2) {
+				soundicon_tab[n_soundicon_tab].name = c1;
+				soundicon_tab[n_soundicon_tab].filename = strdup(string);
+				soundicon_tab[n_soundicon_tab++].length = 0;
+			}
+		}
+	}
+	fclose(f);
+}
+
+static int LookupTune(const char *name) {
+	int ix;
+	for (ix = 0; ix < n_tunes; ix++) {
+		if (strcmp(name, tunes[ix].name) == 0)
+			return ix;
+	}
+	return -1;
+}
+
+static int CheckTranslator(Translator *tr, const MNEM_TAB *keyword_tab, int key)
+{
+	if (tr)
+		return 0;
+	fprintf(stderr, "Cannot set %s: language not set, or is invalid.\n", LookupMnemName(keyword_tab, key));
+	return 1;
+}

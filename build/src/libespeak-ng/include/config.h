@@ -4,10 +4,6 @@
 #define HAVE_SYS_ENDIAN_H 0
 #define HAVE_ISWBLANK 1
 
-#define USE_KLATT 0
-#define USE_LIBPCAUDIO 0
 #define USE_LIBSONIC 1
-#define USE_MBROLA 0
-#define USE_SPEECHPLAYER 0
 
 #define PACKAGE_VERSION "1.52.0.1"

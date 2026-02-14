@@ -23,6 +23,34 @@
 #include "espeak-ng/espeak_ng.h"
 #include "translate.h"
 
+// --- Error context types (merged from error.h) ---
+typedef enum
+{
+        ERROR_CONTEXT_FILE,
+        ERROR_CONTEXT_VERSION,
+} espeak_ng_CONTEXT_TYPE;
+
+typedef struct espeak_ng_ERROR_CONTEXT_
+{
+        espeak_ng_CONTEXT_TYPE type;
+        char *name;
+        int version;
+        int expected_version;
+} espeak_ng_ERROR_CONTEXT_;
+
+espeak_ng_STATUS
+create_file_error_context(espeak_ng_ERROR_CONTEXT *context,
+                          espeak_ng_STATUS status,
+                          const char *filename);
+
+espeak_ng_STATUS
+create_version_mismatch_error_context(espeak_ng_ERROR_CONTEXT *context,
+                                      const char *path,
+                                      int version,
+                                      int expected_version);
+
+// --- Common utility functions ---
+
 extern ESPEAK_NG_API int GetFileLength(const char *filename);
 extern ESPEAK_NG_API void strncpy0(char *to, const char *from, int size);
 

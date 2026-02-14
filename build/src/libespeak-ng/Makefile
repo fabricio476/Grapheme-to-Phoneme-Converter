@@ -301,54 +301,6 @@ encoding.c.s:
 	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.s
 .PHONY : encoding.c.s
 
-error.o: error.c.o
-.PHONY : error.o
-
-# target to build an object file
-error.c.o:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.o
-.PHONY : error.c.o
-
-error.i: error.c.i
-.PHONY : error.i
-
-# target to preprocess a source file
-error.c.i:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.i
-.PHONY : error.c.i
-
-error.s: error.c.s
-.PHONY : error.s
-
-# target to generate assembly for a file
-error.c.s:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.s
-.PHONY : error.c.s
-
-espeak_api.o: espeak_api.c.o
-.PHONY : espeak_api.o
-
-# target to build an object file
-espeak_api.c.o:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.o
-.PHONY : espeak_api.c.o
-
-espeak_api.i: espeak_api.c.i
-.PHONY : espeak_api.i
-
-# target to preprocess a source file
-espeak_api.c.i:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.i
-.PHONY : espeak_api.c.i
-
-espeak_api.s: espeak_api.c.s
-.PHONY : espeak_api.s
-
-# target to generate assembly for a file
-espeak_api.c.s:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.s
-.PHONY : espeak_api.c.s
-
 intonation.o: intonation.c.o
 .PHONY : intonation.o
 
@@ -372,54 +324,6 @@ intonation.s: intonation.c.s
 intonation.c.s:
 	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.s
 .PHONY : intonation.c.s
-
-langopts.o: langopts.c.o
-.PHONY : langopts.o
-
-# target to build an object file
-langopts.c.o:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.o
-.PHONY : langopts.c.o
-
-langopts.i: langopts.c.i
-.PHONY : langopts.i
-
-# target to preprocess a source file
-langopts.c.i:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.i
-.PHONY : langopts.c.i
-
-langopts.s: langopts.c.s
-.PHONY : langopts.s
-
-# target to generate assembly for a file
-langopts.c.s:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.s
-.PHONY : langopts.c.s
-
-mnemonics.o: mnemonics.c.o
-.PHONY : mnemonics.o
-
-# target to build an object file
-mnemonics.c.o:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o
-.PHONY : mnemonics.c.o
-
-mnemonics.i: mnemonics.c.i
-.PHONY : mnemonics.i
-
-# target to preprocess a source file
-mnemonics.c.i:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.i
-.PHONY : mnemonics.c.i
-
-mnemonics.s: mnemonics.c.s
-.PHONY : mnemonics.s
-
-# target to generate assembly for a file
-mnemonics.c.s:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.s
-.PHONY : mnemonics.c.s
 
 numbers.o: numbers.c.o
 .PHONY : numbers.o
@@ -613,30 +517,6 @@ synthdata.c.s:
 	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.s
 .PHONY : synthdata.c.s
 
-synthesize.o: synthesize.c.o
-.PHONY : synthesize.o
-
-# target to build an object file
-synthesize.c.o:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.o
-.PHONY : synthesize.c.o
-
-synthesize.i: synthesize.c.i
-.PHONY : synthesize.i
-
-# target to preprocess a source file
-synthesize.c.i:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.i
-.PHONY : synthesize.c.i
-
-synthesize.s: synthesize.c.s
-.PHONY : synthesize.s
-
-# target to generate assembly for a file
-synthesize.c.s:
-	cd /mnt/dados/github/fab476/meu-g2p/build && $(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.s
-.PHONY : synthesize.c.s
-
 tr_languages.o: tr_languages.c.o
 .PHONY : tr_languages.o
 
@@ -761,21 +641,9 @@ help:
 	@echo "... encoding.o"
 	@echo "... encoding.i"
 	@echo "... encoding.s"
-	@echo "... error.o"
-	@echo "... error.i"
-	@echo "... error.s"
-	@echo "... espeak_api.o"
-	@echo "... espeak_api.i"
-	@echo "... espeak_api.s"
 	@echo "... intonation.o"
 	@echo "... intonation.i"
 	@echo "... intonation.s"
-	@echo "... langopts.o"
-	@echo "... langopts.i"
-	@echo "... langopts.s"
-	@echo "... mnemonics.o"
-	@echo "... mnemonics.i"
-	@echo "... mnemonics.s"
 	@echo "... numbers.o"
 	@echo "... numbers.i"
 	@echo "... numbers.s"
@@ -800,9 +668,6 @@ help:
 	@echo "... synthdata.o"
 	@echo "... synthdata.i"
 	@echo "... synthdata.s"
-	@echo "... synthesize.o"
-	@echo "... synthesize.i"
-	@echo "... synthesize.s"
 	@echo "... tr_languages.o"
 	@echo "... tr_languages.i"
 	@echo "... tr_languages.s"

@@ -46,13 +46,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/dados/github/fab476/meu-g2p/build/espeak-ng.pc")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vim/vimfiles" TYPE DIRECTORY FILES
-    "/mnt/dados/github/fab476/meu-g2p/vim/ftdetect"
-    "/mnt/dados/github/fab476/meu-g2p/vim/syntax"
-    )
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/mnt/dados/github/fab476/meu-g2p/build/src/cmake_install.cmake")

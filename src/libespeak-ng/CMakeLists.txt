@@ -7,15 +7,12 @@ target_include_directories(espeak-ng-config INTERFACE ${ESPEAK_CONFIG_DIR})
 
 add_library(espeak-ng
   common.c
-  mnemonics.c
-  error.c
 
   compiledict.c
 
   dictionary.c
   encoding.c
   intonation.c
-  langopts.c
   numbers.c
   phoneme.c
   phonemelist.c
@@ -23,14 +20,11 @@ add_library(espeak-ng
   setlengths.c
   ssml.c
   synthdata.c
-  synthesize.c
   tr_languages.c
   translate.c
   translateword.c
   voices.c
   speech.c
-
-  espeak_api.c
 )
 set_target_properties(
   espeak-ng PROPERTIES

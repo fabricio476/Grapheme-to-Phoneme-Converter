@@ -77,14 +77,6 @@ typedef enum {
 	ENGENDER_NEUTRAL = 3,
 } espeak_ng_VOICE_GENDER;
 
-typedef struct
-{
-  void (*outputPhoSymbol)(char* pho_code,int pho_type);
-  void (*outputSilence)(short echo_tail);
-  void (*outputVoiced)(short sample);
-  void (*outputUnvoiced)(short sample);
-} espeak_ng_OUTPUT_HOOKS;
-
 /* eSpeak NG 1.49.0 */
 
 typedef struct espeak_ng_ERROR_CONTEXT_ *espeak_ng_ERROR_CONTEXT;
@@ -147,21 +139,6 @@ espeak_ng_Synthesize(const void *text,
                      void *user_data);
 
 ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_SynthesizeMark(const void *text,
-                         size_t size,
-                         const char *index_mark,
-                         unsigned int end_position,
-                         unsigned int flags,
-                         unsigned int *unique_identifier,
-                         void *user_data);
-
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_SpeakKeyName(const char *key_name);
-
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_SpeakCharacter(wchar_t character);
-
-ESPEAK_NG_API espeak_ng_STATUS
 espeak_ng_Cancel(void);
 
 ESPEAK_NG_API espeak_ng_STATUS
@@ -177,40 +154,7 @@ espeak_ng_CompileDictionary(const char *dsource,
                             int flags,
                             espeak_ng_ERROR_CONTEXT *context);
 
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_CompileMbrolaVoice(const char *path,
-                             FILE *log,
-                             espeak_ng_ERROR_CONTEXT *context);
-
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_CompilePhonemeData(long rate,
-                             FILE *log,
-                             espeak_ng_ERROR_CONTEXT *context);
-
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_CompileIntonation(FILE *log,
-                            espeak_ng_ERROR_CONTEXT *context);
-
-
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_CompileIntonationPath(const char *source_path,
-                                const char *destination_path,
-                                FILE *log,
-                                espeak_ng_ERROR_CONTEXT *context);
-
 /* eSpeak NG 1.49.1 */
-
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_CompilePhonemeDataPath(long rate,
-                                 const char *source_path,
-                                 const char *destination_path,
-                                 FILE *log,
-                                 espeak_ng_ERROR_CONTEXT *context);
-                                 
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_SetOutputHooks(espeak_ng_OUTPUT_HOOKS* hooks);
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_SetConstF0(int f0);
 
 ESPEAK_NG_API espeak_ng_STATUS
 espeak_ng_SetRandSeed(long seed);

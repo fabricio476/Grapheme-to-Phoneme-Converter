@@ -28,7 +28,6 @@
 #include <espeak-ng/speak_lib.h>
 #include <espeak-ng/encoding.h>
 
-#include "intonation.h"
 #include "phoneme.h"     // for PHONEME_TAB, PhonemeCode2, phonPAUSE, phPAUSE
 #include "synthdata.h"   // for PhonemeCode
 #include "synthesize.h"  // for PHONEME_LIST, TUNE, phoneme_list, phoneme_tab

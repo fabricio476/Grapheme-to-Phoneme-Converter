@@ -22,7 +22,7 @@
 
 #include <espeak-ng/espeak_ng.h>
 
-#include "mnemonics.h"
+#include "phoneme.h"
 #include "translate.h"
 
 #ifdef __cplusplus

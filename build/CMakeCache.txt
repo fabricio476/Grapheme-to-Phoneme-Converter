@@ -341,20 +341,11 @@ GIT_EXECUTABLE:FILEPATH=/bin/git
 //Command to build the project
 MAKECOMMAND:STRING=/usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 
-//Path to a program.
-MBROLA_BIN:FILEPATH=MBROLA_BIN-NOTFOUND
-
 //Path to the memory checking command, used for memory error detection.
 MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
-
-//Path to a file.
-PCAUDIO_INC:PATH=PCAUDIO_INC-NOTFOUND
-
-//Path to a library.
-PCAUDIO_LIB:FILEPATH=PCAUDIO_LIB-NOTFOUND
 
 //Path to a program.
 RONN:FILEPATH=RONN-NOTFOUND
@@ -368,20 +359,8 @@ SONIC_INC:PATH=SONIC_INC-NOTFOUND
 //Path to a library.
 SONIC_LIB:FILEPATH=SONIC_LIB-NOTFOUND
 
-//Use klatt for speech synthesis
-USE_KLATT:BOOL=OFF
-
-//Use libPcAudio for sound output
-USE_LIBPCAUDIO:BOOL=OFF
-
 //Use libsonic for faster speech rates
 USE_LIBSONIC:BOOL=ON
-
-//Use mbrola for speech synthesis
-USE_MBROLA:BOOL=OFF
-
-//Use speech-player for speech synthesis
-USE_SPEECHPLAYER:BOOL=OFF
 
 //Enable clang source-based coverage instrumentation
 WITH_COVERAGE:BOOL=OFF

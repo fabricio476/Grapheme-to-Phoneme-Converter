@@ -122,35 +122,6 @@ typedef struct { // 44 bytes
 } frame_t2; // without the extra Klatt parameters
 
 typedef struct {
-	const unsigned char *pitch_env;
-	int pitch;      // pitch Hz*256
-	int pitch_ix;   // index into pitch envelope (*256)
-	int pitch_inc;  // increment to pitch_ix
-	int pitch_base; // Hz*256 low, before modified by envelope
-	int pitch_range; // Hz*256 range of envelope
-
-	unsigned char *mix_wavefile; // wave file to be added to synthesis
-	int n_mix_wavefile; // length in bytes
-	int mix_wave_scale; // 0=2 byte samples
-	int mix_wave_amp;
-	int mix_wavefile_ix;
-	int mix_wavefile_max; // length of available WAV data (in bytes)
-	int mix_wavefile_offset;
-
-	int amplitude;
-	int amplitude_v;
-	int amplitude_fmt; // percentage amplitude adjustment for formant synthesis
-} WGEN_DATA;
-
-typedef struct {
-	double a;
-	double b;
-	double c;
-	double x1;
-	double x2;
-} RESONATOR;
-
-typedef struct {
 	short length_total; // not used
 	unsigned char n_frames;
 	unsigned char sqflags;
@@ -396,24 +367,10 @@ extern unsigned int embedded_list[];
 
 extern const unsigned char env_fall[128];
 
-// Wavegen queue — kept as stubs for compatibility
-#define N_WCMDQ   170
-#define MIN_WCMDQ  25
-
-extern intptr_t wcmdq[N_WCMDQ][4];
-extern int wcmdq_head;
-extern int wcmdq_tail;
-
 void MarkerEvent(int type, unsigned int char_position, int value, int value2, unsigned char *out_ptr);
 
 extern unsigned char *wavefile_data;
 extern int samplerate;
-
-#define N_ECHO_BUF 5500   // max of 250mS at 22050 Hz
-extern int echo_head;
-extern int echo_tail;
-extern int echo_amp;
-extern short echo_buf[N_ECHO_BUF];
 
 void SynthesizeInit(void);
 int  SpeakNextClause(int control);
@@ -432,18 +389,10 @@ void Write4Bytes(FILE *f, int value);
 #define N_ENVELOPE_DATA   20
 extern const unsigned char *const envelope_data[N_ENVELOPE_DATA];
 
-extern int formant_rate[];         // max rate of change of each formant
 extern SPEED_FACTORS speed;
 
-extern unsigned char *out_ptr;
-extern unsigned char *out_end;
-extern espeak_EVENT *event_list;
 extern const int version_phdata;
 
-void DoEmbedded(int *embix, int sourceix);
-void DoMarker(int type, int char_posn, int length, int value);
-void DoPhonemeMarker(int type, int char_posn, int length, char *name);
-int PauseLength(int pause, int control);
 const char *WordToString(char buf[5], unsigned int word);
 
 #ifdef __cplusplus

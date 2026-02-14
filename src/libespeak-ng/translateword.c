@@ -34,7 +34,6 @@
 #include <espeak-ng/encoding.h>
 
 #include "translate.h"
-#include "translateword.h"
 #include "common.h"               // for strncpy0
 #include "dictionary.h"           // for TranslateRules, LookupDictList
 #include "numbers.h"              // for SetSpellingStress, ...

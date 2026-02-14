@@ -2,7 +2,6 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o: \
  /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/intonation.c \
  /usr/include/stdc-predef.h \
  /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng/include/config.h \
- /mnt/dados/github/fab476/meu-g2p/src/include/compat/stdint.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -18,9 +17,8 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /mnt/dados/github/fab476/meu-g2p/src/include/compat/stdio.h \
- /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h /usr/include/stdio.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
@@ -38,9 +36,8 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
- /mnt/dados/github/fab476/meu-g2p/src/include/compat/endian.h \
- /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endianness.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
@@ -56,19 +53,15 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o: \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /mnt/dados/github/fab476/meu-g2p/src/include/compat/string.h \
- /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /mnt/dados/github/fab476/meu-g2p/src/include/compat/strings.h \
  /usr/include/strings.h \
  /mnt/dados/github/fab476/meu-g2p/src/include/espeak-ng/espeak_ng.h \
  /mnt/dados/github/fab476/meu-g2p/src/include/espeak-ng/speak_lib.h \
  /mnt/dados/github/fab476/meu-g2p/src/include/espeak-ng/encoding.h \
- /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/intonation.h \
- /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/translate.h \
- /usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h \
  /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/phoneme.h \
  /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthdata.h \
- /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthesize.h
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthesize.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h \
+ /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/translate.h

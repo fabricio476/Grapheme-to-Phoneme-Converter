@@ -1079,7 +1079,7 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/sonic.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sonic.dir/build.make CMakeFiles/sonic.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sonic.dir/build.make CMakeFiles/sonic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=26 "Built target sonic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=21 "Built target sonic"
 .PHONY : CMakeFiles/sonic.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1096,7 +1096,7 @@ sonic: CMakeFiles/sonic.dir/rule
 # codegen rule for target.
 CMakeFiles/sonic.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sonic.dir/build.make CMakeFiles/sonic.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=26 "Finished codegen for target sonic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=21 "Finished codegen for target sonic"
 .PHONY : CMakeFiles/sonic.dir/codegen
 
 # clean rule for target.
@@ -1112,12 +1112,12 @@ src/CMakeFiles/espeak-ng-bin.dir/all: src/ucd-tools/CMakeFiles/ucd.dir/all
 src/CMakeFiles/espeak-ng-bin.dir/all: src/libespeak-ng/CMakeFiles/espeak-ng.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=24,25 "Built target espeak-ng-bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=19,20 "Built target espeak-ng-bin"
 .PHONY : src/CMakeFiles/espeak-ng-bin.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/espeak-ng-bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 27
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/espeak-ng-bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/espeak-ng-bin.dir/rule
@@ -1129,7 +1129,7 @@ espeak-ng-bin: src/CMakeFiles/espeak-ng-bin.dir/rule
 # codegen rule for target.
 src/CMakeFiles/espeak-ng-bin.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/espeak-ng-bin.dir/build.make src/CMakeFiles/espeak-ng-bin.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=24,25 "Finished codegen for target espeak-ng-bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=19,20 "Finished codegen for target espeak-ng-bin"
 .PHONY : src/CMakeFiles/espeak-ng-bin.dir/codegen
 
 # clean rule for target.
@@ -1144,12 +1144,12 @@ src/CMakeFiles/espeak-ng-bin.dir/clean:
 src/CMakeFiles/speak-ng.dir/all: src/CMakeFiles/espeak-ng-bin.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/speak-ng.dir/build.make src/CMakeFiles/speak-ng.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/speak-ng.dir/build.make src/CMakeFiles/speak-ng.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=27 "Built target speak-ng"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=22 "Built target speak-ng"
 .PHONY : src/CMakeFiles/speak-ng.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/speak-ng.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 33
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/speak-ng.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/speak-ng.dir/rule
@@ -1161,7 +1161,7 @@ speak-ng: src/CMakeFiles/speak-ng.dir/rule
 # codegen rule for target.
 src/CMakeFiles/speak-ng.dir/codegen: src/CMakeFiles/espeak-ng-bin.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/speak-ng.dir/build.make src/CMakeFiles/speak-ng.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=27 "Finished codegen for target speak-ng"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=22 "Finished codegen for target speak-ng"
 .PHONY : src/CMakeFiles/speak-ng.dir/codegen
 
 # clean rule for target.
@@ -1176,7 +1176,7 @@ src/CMakeFiles/speak-ng.dir/clean:
 src/ucd-tools/CMakeFiles/ucd.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=28,29,30,31,32,33,34 "Built target ucd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=23,24,25,26,27,28,29 "Built target ucd"
 .PHONY : src/ucd-tools/CMakeFiles/ucd.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1193,7 +1193,7 @@ ucd: src/ucd-tools/CMakeFiles/ucd.dir/rule
 # codegen rule for target.
 src/ucd-tools/CMakeFiles/ucd.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/ucd-tools/CMakeFiles/ucd.dir/build.make src/ucd-tools/CMakeFiles/ucd.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=28,29,30,31,32,33,34 "Finished codegen for target ucd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=23,24,25,26,27,28,29 "Finished codegen for target ucd"
 .PHONY : src/ucd-tools/CMakeFiles/ucd.dir/codegen
 
 # clean rule for target.
@@ -1208,12 +1208,12 @@ src/ucd-tools/CMakeFiles/ucd.dir/clean:
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/all: src/ucd-tools/CMakeFiles/ucd.dir/all
 	$(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target espeak-ng"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target espeak-ng"
 .PHONY : src/libespeak-ng/CMakeFiles/espeak-ng.dir/all
 
 # Build rule for subdir invocation for target.
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/libespeak-ng/CMakeFiles/espeak-ng.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/dados/github/fab476/meu-g2p/build/CMakeFiles 0
 .PHONY : src/libespeak-ng/CMakeFiles/espeak-ng.dir/rule
@@ -1225,7 +1225,7 @@ espeak-ng: src/libespeak-ng/CMakeFiles/espeak-ng.dir/rule
 # codegen rule for target.
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make src/libespeak-ng/CMakeFiles/espeak-ng.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Finished codegen for target espeak-ng"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Finished codegen for target espeak-ng"
 .PHONY : src/libespeak-ng/CMakeFiles/espeak-ng.dir/codegen
 
 # clean rule for target.

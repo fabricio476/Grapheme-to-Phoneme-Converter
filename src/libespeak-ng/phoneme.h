@@ -27,6 +27,14 @@ extern "C"
 {
 #endif
 
+// --- Mnemonic table (merged from mnemonics.h) ---
+typedef struct {
+        const char *mnem;
+        int value;
+} MNEM_TAB;
+int LookupMnem(const MNEM_TAB *table, const char *string);
+const char *LookupMnemName(const MNEM_TAB *table, const int value);
+
 // See docs/phonemes.md for the list of supported features.
 typedef enum {
 #	define FEATURE_T(a, b, c) ((a << 16) | (b << 8) | (c))

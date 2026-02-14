@@ -41,9 +41,9 @@
 
 #include "ssml.h"
 #include "common.h"           // for strncpy0
-#include "mnemonics.h"               // for LookupMnemName, MNEM_TAB, 
+#include "phoneme.h"              // for LookupMnemName, MNEM_TAB
 #include "readclause.h"           // for PARAM_STACK, param_stack, AddNameData
-#include "soundicon.h"               // for LoadSoundFile2
+#include "stubs.h"                // for LoadSoundFile2
 #include "synthesize.h"           // for SPEED_FACTORS, speed
 #include "translate.h"            // for CTRL_EMBEDDED
 #include "voice.h"                // for SelectVoice, SelectVoiceByName

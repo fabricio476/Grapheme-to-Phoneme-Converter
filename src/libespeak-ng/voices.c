@@ -42,15 +42,12 @@
 #include "voice.h"                    // for voice_t, DoVoiceChange, N_PEAKS
 #include "common.h"                    // for GetFileLength, strncpy0
 #include "dictionary.h"               // for LoadDictionary
-#include "langopts.h"                 // for LoadLanguageOptions
-#include "mnemonics.h"               // for LookupMnemName, MNEM_TAB
-#include "phoneme.h"                  // for REPLACE_PHONEMES, n_replace_pho...
+#include "phoneme.h"                  // for REPLACE_PHONEMES, n_replace_pho..., LookupMnemName, MNEM_TAB
 #include "speech.h"                   // for PATHSEP
-#include "mbrola.h"                   // for LoadMbrolaTable
+#include "stubs.h"                    // for LoadMbrolaTable, InitBreath
 #include "synthdata.h"                // for SelectPhonemeTableName, LookupP...
 #include "synthesize.h"               // for SetSpeed, SPEED_FACTORS, speed
-#include "translate.h"                // for LANGUAGE_OPTIONS, DeleteTranslator
-#include "wavegen.h"                  // for InitBreath
+#include "translate.h"                // for LANGUAGE_OPTIONS, DeleteTranslator, LoadLanguageOptions
 
 static int AddToVoicesList(const char *fname, int len_path_voices, int is_language_file);
 
@@ -62,10 +59,6 @@ static const MNEM_TAB genders[] = {
 };
 
 int tone_points[12] = { 600, 170, 1200, 135, 2000, 110, 3000, 110, -1, 0 };
-
-// limit the rate of change for each formant number
-static const int formant_rate_22050[9] = { 240, 170, 170, 170, 170, 170, 170, 170, 170 }; // values for 22kHz sample rate
-int formant_rate[9]; // values adjusted for actual sample rate
 
 #define DEFAULT_LANGUAGE_PRIORITY  5
 #define N_VOICES_LIST  350
@@ -294,9 +287,6 @@ void VoiceReset(int tone_only)
 		voice->breath[pk] = 0;
 		voice->breathw[pk] = breath_widths[pk]; // default breath formant widths
 		voice->freqadd[pk] = 0;
-
-		// adjust formant smoothing depending on sample rate
-		formant_rate[pk] = (formant_rate_22050[pk] * 22050)/samplerate;
 	}
 
 	// This table provides the opportunity for tone control.
@@ -311,9 +301,6 @@ void VoiceReset(int tone_only)
 
 	if (tone_only == 0) {
 		n_replace_phonemes = 0;
-#if USE_MBROLA
-		LoadMbrolaTable(NULL, NULL, 0);
-#endif
 	}
 
 // probably unnecessary, but removing this would break tests
@@ -430,10 +417,6 @@ voice_t *LoadVoice(const char *vname, int control)
 	char phonemes_name[40] = "";
 	const char *language_type;
 	char buf[sizeof(path_home)+30];
-#if USE_MBROLA
-	char name1[40];
-	char name2[80];
-#endif
 
 	int pitch1;
 	int pitch2;
@@ -663,39 +646,10 @@ voice_t *LoadVoice(const char *vname, int control)
                 sscanf(p, "%d", &voice->speed_percent);
                 SetSpeed(3);
                 break;
-#if USE_MBROLA
             case V_MBROLA:
-            {
-                int srate = 16000;
-
-                name2[0] = 0;
-                sscanf(p, "%s %s %d", name1, name2, &srate);
-                espeak_ng_STATUS status = LoadMbrolaTable(name1, name2, &srate);
-                if (status != ENS_OK) {
-                    espeak_ng_PrintStatusCodeMessage(status, stderr, NULL);
-                    fclose(f_voice);
-                    return NULL;
-                }
-                else
-                    voice->samplerate = srate;
-            }
                 break;
-#else
-            case V_MBROLA:
-                fprintf(stderr, "espeak-ng was built without mbrola support\n");
-                break;
-#endif
-#if USE_KLATT
             case V_KLATT:
-                voice->klattv[0] = 1; // default source: IMPULSIVE
-                Read8Numbers(p, voice->klattv);
-                voice->klattv[KLATT_Kopen] -= 40;
                 break;
-#else
-            case V_KLATT:
-                fprintf(stderr, "espeak-ng was built without klatt support\n");
-                break;
-#endif
             case V_FAST:
                 sscanf(p, "%d", &speed.fast_settings);
                 SetSpeed(3);

@@ -86,38 +86,10 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/common.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/espeak-ng.dir/common.c.s"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/common.c -o CMakeFiles/espeak-ng.dir/common.c.s
 
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/mnemonics.c
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o -MF CMakeFiles/espeak-ng.dir/mnemonics.c.o.d -o CMakeFiles/espeak-ng.dir/mnemonics.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/mnemonics.c
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/espeak-ng.dir/mnemonics.c.i"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/mnemonics.c > CMakeFiles/espeak-ng.dir/mnemonics.c.i
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/espeak-ng.dir/mnemonics.c.s"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/mnemonics.c -o CMakeFiles/espeak-ng.dir/mnemonics.c.s
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/error.c
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.o"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.o -MF CMakeFiles/espeak-ng.dir/error.c.o.d -o CMakeFiles/espeak-ng.dir/error.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/error.c
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/espeak-ng.dir/error.c.i"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/error.c > CMakeFiles/espeak-ng.dir/error.c.i
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/espeak-ng.dir/error.c.s"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/error.c -o CMakeFiles/espeak-ng.dir/error.c.s
-
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/compiledict.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.o -MF CMakeFiles/espeak-ng.dir/compiledict.c.o.d -o CMakeFiles/espeak-ng.dir/compiledict.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/compiledict.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.i: cmake_force
@@ -131,7 +103,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/dictionary.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.o -MF CMakeFiles/espeak-ng.dir/dictionary.c.o.d -o CMakeFiles/espeak-ng.dir/dictionary.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/dictionary.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.i: cmake_force
@@ -145,7 +117,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/encoding.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.o -MF CMakeFiles/espeak-ng.dir/encoding.c.o.d -o CMakeFiles/espeak-ng.dir/encoding.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/encoding.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.i: cmake_force
@@ -159,7 +131,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/intonation.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o -MF CMakeFiles/espeak-ng.dir/intonation.c.o.d -o CMakeFiles/espeak-ng.dir/intonation.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/intonation.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.i: cmake_force
@@ -170,24 +142,10 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/espeak-ng.dir/intonation.c.s"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/intonation.c -o CMakeFiles/espeak-ng.dir/intonation.c.s
 
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/langopts.c
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.o"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.o -MF CMakeFiles/espeak-ng.dir/langopts.c.o.d -o CMakeFiles/espeak-ng.dir/langopts.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/langopts.c
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/espeak-ng.dir/langopts.c.i"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/langopts.c > CMakeFiles/espeak-ng.dir/langopts.c.i
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/espeak-ng.dir/langopts.c.s"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/langopts.c -o CMakeFiles/espeak-ng.dir/langopts.c.s
-
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/numbers.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.o -MF CMakeFiles/espeak-ng.dir/numbers.c.o.d -o CMakeFiles/espeak-ng.dir/numbers.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/numbers.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.i: cmake_force
@@ -201,7 +159,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/phoneme.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.o -MF CMakeFiles/espeak-ng.dir/phoneme.c.o.d -o CMakeFiles/espeak-ng.dir/phoneme.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/phoneme.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.i: cmake_force
@@ -215,7 +173,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/phonemelist.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.o -MF CMakeFiles/espeak-ng.dir/phonemelist.c.o.d -o CMakeFiles/espeak-ng.dir/phonemelist.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/phonemelist.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.i: cmake_force
@@ -229,7 +187,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/readclause.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.o -MF CMakeFiles/espeak-ng.dir/readclause.c.o.d -o CMakeFiles/espeak-ng.dir/readclause.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/readclause.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.i: cmake_force
@@ -243,7 +201,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/readclause.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/setlengths.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.o -MF CMakeFiles/espeak-ng.dir/setlengths.c.o.d -o CMakeFiles/espeak-ng.dir/setlengths.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/setlengths.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.i: cmake_force
@@ -257,7 +215,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/ssml.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.o -MF CMakeFiles/espeak-ng.dir/ssml.c.o.d -o CMakeFiles/espeak-ng.dir/ssml.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/ssml.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.i: cmake_force
@@ -271,7 +229,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthdata.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.o -MF CMakeFiles/espeak-ng.dir/synthdata.c.o.d -o CMakeFiles/espeak-ng.dir/synthdata.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthdata.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.i: cmake_force
@@ -282,24 +240,10 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/espeak-ng.dir/synthdata.c.s"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthdata.c -o CMakeFiles/espeak-ng.dir/synthdata.c.s
 
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthesize.c
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.o"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.o -MF CMakeFiles/espeak-ng.dir/synthesize.c.o.d -o CMakeFiles/espeak-ng.dir/synthesize.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthesize.c
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/espeak-ng.dir/synthesize.c.i"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthesize.c > CMakeFiles/espeak-ng.dir/synthesize.c.i
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/espeak-ng.dir/synthesize.c.s"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/synthesize.c -o CMakeFiles/espeak-ng.dir/synthesize.c.s
-
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/tr_languages.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.o -MF CMakeFiles/espeak-ng.dir/tr_languages.c.o.d -o CMakeFiles/espeak-ng.dir/tr_languages.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/tr_languages.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.i: cmake_force
@@ -313,7 +257,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/translate.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.o -MF CMakeFiles/espeak-ng.dir/translate.c.o.d -o CMakeFiles/espeak-ng.dir/translate.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/translate.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.i: cmake_force
@@ -327,7 +271,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/translateword.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.o -MF CMakeFiles/espeak-ng.dir/translateword.c.o.d -o CMakeFiles/espeak-ng.dir/translateword.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/translateword.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.i: cmake_force
@@ -341,7 +285,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/voices.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.o -MF CMakeFiles/espeak-ng.dir/voices.c.o.d -o CMakeFiles/espeak-ng.dir/voices.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/voices.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.i: cmake_force
@@ -355,7 +299,7 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.s: cmake_force
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/speech.c
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o -MF CMakeFiles/espeak-ng.dir/speech.c.o.d -o CMakeFiles/espeak-ng.dir/speech.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/speech.c
 
 src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.i: cmake_force
@@ -366,30 +310,13 @@ src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/espeak-ng.dir/speech.c.s"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/speech.c -o CMakeFiles/espeak-ng.dir/speech.c.s
 
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/flags.make
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.o: /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/espeak_api.c
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.o: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.o"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.o -MF CMakeFiles/espeak-ng.dir/espeak_api.c.o.d -o CMakeFiles/espeak-ng.dir/espeak_api.c.o -c /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/espeak_api.c
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/espeak-ng.dir/espeak_api.c.i"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/espeak_api.c > CMakeFiles/espeak-ng.dir/espeak_api.c.i
-
-src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/espeak-ng.dir/espeak_api.c.s"
-	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && /bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/dados/github/fab476/meu-g2p/src/libespeak-ng/espeak_api.c -o CMakeFiles/espeak-ng.dir/espeak_api.c.s
-
 # Object files for target espeak-ng
 espeak__ng_OBJECTS = \
 "CMakeFiles/espeak-ng.dir/common.c.o" \
-"CMakeFiles/espeak-ng.dir/mnemonics.c.o" \
-"CMakeFiles/espeak-ng.dir/error.c.o" \
 "CMakeFiles/espeak-ng.dir/compiledict.c.o" \
 "CMakeFiles/espeak-ng.dir/dictionary.c.o" \
 "CMakeFiles/espeak-ng.dir/encoding.c.o" \
 "CMakeFiles/espeak-ng.dir/intonation.c.o" \
-"CMakeFiles/espeak-ng.dir/langopts.c.o" \
 "CMakeFiles/espeak-ng.dir/numbers.c.o" \
 "CMakeFiles/espeak-ng.dir/phoneme.c.o" \
 "CMakeFiles/espeak-ng.dir/phonemelist.c.o" \
@@ -397,25 +324,20 @@ espeak__ng_OBJECTS = \
 "CMakeFiles/espeak-ng.dir/setlengths.c.o" \
 "CMakeFiles/espeak-ng.dir/ssml.c.o" \
 "CMakeFiles/espeak-ng.dir/synthdata.c.o" \
-"CMakeFiles/espeak-ng.dir/synthesize.c.o" \
 "CMakeFiles/espeak-ng.dir/tr_languages.c.o" \
 "CMakeFiles/espeak-ng.dir/translate.c.o" \
 "CMakeFiles/espeak-ng.dir/translateword.c.o" \
 "CMakeFiles/espeak-ng.dir/voices.c.o" \
-"CMakeFiles/espeak-ng.dir/speech.c.o" \
-"CMakeFiles/espeak-ng.dir/espeak_api.c.o"
+"CMakeFiles/espeak-ng.dir/speech.c.o"
 
 # External object files for target espeak-ng
 espeak__ng_EXTERNAL_OBJECTS =
 
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/common.c.o
-src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/mnemonics.c.o
-src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/error.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/compiledict.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/dictionary.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/encoding.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/intonation.c.o
-src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/langopts.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/numbers.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/phoneme.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/phonemelist.c.o
@@ -423,16 +345,14 @@ src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/readc
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/setlengths.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/ssml.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthdata.c.o
-src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/synthesize.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/tr_languages.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/translate.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/translateword.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/voices.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/speech.c.o
-src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/espeak_api.c.o
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/build.make
 src/libespeak-ng/libespeak-ng.a: src/libespeak-ng/CMakeFiles/espeak-ng.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking C static library libespeak-ng.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/dados/github/fab476/meu-g2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking C static library libespeak-ng.a"
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && $(CMAKE_COMMAND) -P CMakeFiles/espeak-ng.dir/cmake_clean_target.cmake
 	cd /mnt/dados/github/fab476/meu-g2p/build/src/libespeak-ng && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/espeak-ng.dir/link.txt --verbose=$(VERBOSE)
 

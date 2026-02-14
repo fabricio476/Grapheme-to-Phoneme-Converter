@@ -675,6 +675,24 @@ void SetVoiceStack(espeak_VOICE *v, const char *variant_name);
 
 extern FILE *f_trans; // for logging
 
+// --- Language options loading (merged from langopts.h) ---
+void LoadLanguageOptions(Translator *translator, int key, char *keyValue);
+void LoadConfig(void);
+
+// --- Phoneme list (merged from phonemelist.h) ---
+void MakePhonemeList(Translator *tr, int post_pause, bool start_sentence);
+
+// --- Intonation (merged from intonation.h) ---
+void CalcPitches(Translator *tr, int clause_type);
+
+// --- Set lengths (merged from setlengths.h) ---
+void CalcLengths(Translator *tr);
+void SetLengthMods(Translator *tr, int value);
+espeak_ng_STATUS SetParameter(int parameter, int value, int relative);
+
+// --- Translate word (merged from translateword.h) ---
+int TranslateWord3(Translator *tr, char *word_start, WORD_TAB *wtab, char *word_out, bool *any_stressed_words, ALPHABET *current_alphabet, char word_phonemes[], size_t size_word_phonemes);
+
 #ifdef __cplusplus
 }
 #endif

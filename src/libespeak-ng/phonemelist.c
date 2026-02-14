@@ -29,15 +29,10 @@
 #include <espeak-ng/speak_lib.h>
 #include <espeak-ng/encoding.h>
 
-#include "phonemelist.h"
 #include "phoneme.h"     // for PHONEME_TAB, phVOWEL, REPLACE_PHONEMES, phPAUSE
 #include "synthdata.h"   // for InterpretPhoneme, SelectPhonemeTable
 #include "synthesize.h"  // for PHONEME_LIST, PHONEME_LIST2, phoneme_tab
-#include "translate.h"   // for Translator, LANGUAGE_OPTIONS, option_wordgap
-
-#include "phoneme.h"
-#include "synthesize.h"
-#include "translate.h"
+#include "translate.h"   // for Translator, LANGUAGE_OPTIONS, option_wordgap, MakePhonemeList
 #include "speech.h"
 
 static void SetRegressiveVoicing(int regression, PHONEME_LIST2 *plist2, PHONEME_TAB *ph, Translator *tr);

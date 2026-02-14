@@ -26,6 +26,30 @@
 
 #include "phoneme.h"
 
+// --- Mnemonic functions (merged from mnemonics.c) ---
+
+int LookupMnem(const MNEM_TAB *table, const char *string)
+{
+        while (table->mnem != NULL) {
+                if (string && strcmp(string, table->mnem) == 0)
+                        return table->value;
+                table++;
+        }
+        return table->value;
+}
+
+const char *LookupMnemName(const MNEM_TAB *table, const int value)
+{
+        while (table->mnem != NULL) {
+                if (table->value == value)
+                        return table->mnem;
+                table++;
+        }
+        return ""; // not found
+}
+
+// --- Phoneme feature functions ---
+
 phoneme_feature_t phoneme_feature_from_string(const char *feature)
 {
 	if (!feature || strlen(feature) != 3)

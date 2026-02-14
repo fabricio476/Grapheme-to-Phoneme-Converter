@@ -47,27 +47,100 @@
 #include "speech.h"
 #include "common.h"               // for GetFileLength
 #include "dictionary.h"           // for GetTranslatedPhonemeString, strncpy0
-#include "setlengths.h"           // for SetParameter, SetSpeed
-#include "langopts.h"             // for LoadConfig
 #include "readclause.h"           // for PARAM_STACK, param_stack
 #include "synthdata.h"            // for FreePhData, LoadPhData
-#include "synthesize.h"           // for SpeakNextClause, Generate, Synthesi...
-#include "translate.h"            // for p_decoder, InitText, translator
+#include "synthesize.h"           // for PHONEME_LIST, synthesize types
+#include "phoneme.h"              // for PHONEME_TAB
+#include "translate.h"            // for p_decoder, InitText, translator, SetParameter, LoadConfig, CalcPitches
 #include "voice.h"                // for FreeVoiceList, VoiceReset, current_...
-#include "wavegen.h"              // for stub prototypes
+#include "stubs.h"                // for stub prototypes
 
 // Global stubs - these were originally defined in wavegen.c (removed)
 int samplerate = 22050;
-intptr_t wcmdq[N_WCMDQ][4];
-int wcmdq_head = 0;
-int wcmdq_tail = 0;
-// Note: wavefile_data is defined in synthdata.c, formant_rate in voices.c
-int echo_head = 0;
-int echo_tail = 0;
-int echo_amp = 0;
-short echo_buf[N_ECHO_BUF];
-unsigned char *out_ptr = NULL;
-unsigned char *out_end = NULL;
+
+// =================================================================
+// Synthesize engine (merged from synthesize.c)
+// =================================================================
+
+// list of phonemes in a clause
+int n_phoneme_list = 0;
+PHONEME_LIST phoneme_list[N_PHONEME_LIST+1];
+
+static voice_t *new_voice = NULL;
+static int (*phoneme_callback)(const char *) = NULL;
+
+const char *WordToString(char buf[5], unsigned int word)
+{
+	// Convert a phoneme mnemonic word into a string
+	int ix;
+	for (ix = 0; ix < 4; ix++)
+		buf[ix] = word >> (ix*8);
+	buf[4] = 0;
+	return buf;
+}
+
+void SynthesizeInit(void)
+{
+	// Stub
+}
+
+int SpeakNextClause(int control)
+{
+	int clause_tone;
+	char *voice_change;
+
+	if (control == 2) {
+		n_phoneme_list = 0;
+		return 0;
+	}
+
+	if (text_decoder_eof(p_decoder)) {
+		skipping_text = false;
+		return 0;
+	}
+
+	SelectPhonemeTable(voice->phoneme_tab_ix);
+
+	TranslateClause(translator, &clause_tone, &voice_change);
+
+	CalcPitches(translator, clause_tone);
+	CalcLengths(translator);
+
+	if ((option_phonemes & 0xf) || (phoneme_callback != NULL)) {
+		const char *phon_out;
+		phon_out = GetTranslatedPhonemeString(option_phonemes);
+		if (option_phonemes & 0xf)
+			fprintf(f_trans, "%s\n", phon_out);
+		if (phoneme_callback != NULL)
+			phoneme_callback(phon_out);
+	}
+
+	if (skipping_text) {
+		n_phoneme_list = 0;
+		return 1;
+	}
+
+	if (voice_change != NULL) {
+		new_voice = LoadVoiceVariant(voice_change, 0);
+	}
+
+	if (new_voice) {
+		new_voice = NULL;
+	}
+
+	return 1;
+}
+
+#pragma GCC visibility push(default)
+ESPEAK_API void espeak_SetPhonemeCallback(int (*PhonemeCallback)(const char *))
+{
+	phoneme_callback = PhonemeCallback;
+}
+#pragma GCC visibility pop
+
+// =================================================================
+// Audio stubs (minimal stubs needed for G2P build)
+// =================================================================
 SPEED_FACTORS speed;
 
 // Global variables originally in synthesize.c (original version, removed)
@@ -92,15 +165,8 @@ const int embedded_default[N_EMBEDDED_VALUES] = {
 
 // Stubs for mbrola globals (originally in mbrola.c)
 char mbrola_name[20] = {0};
-int mbrola_delay = 0;
 
-// Stub function implementations (originally in wavegen.c & synthesize.c)
-void WavegenInit(int rate, int wavemult) { (void)rate; (void)wavemult; }
-void WavegenFill(void) {}
-void WavegenFini(void) {}
-int WcmdqUsed(void) { return 0; }
-void WcmdqStop(void) {}
-void WcmdqInc(void) {}
+// Stub function implementations (originally in wavegen.c)
 void GetAmplitude(void) {}
 void InitBreath(void) {}
 void WavegenSetVoice(voice_t *v) { (void)v; }
@@ -113,13 +179,6 @@ void Write4Bytes(FILE *f, int value) {
         fputc(value & 0xff, f);
         value = value >> 8;
     }
-}
-
-int FormantTransition2(frameref_t *seq, int *n_frames, 
-    unsigned int data1, unsigned int data2,
-    PHONEME_TAB *other_ph, int which) {
-    (void)seq; (void)n_frames; (void)data1; (void)data2; (void)other_ph; (void)which;
-    return 0;
 }
 
 void SetEmbedded(int control, int value) {
@@ -144,34 +203,13 @@ void SetEmbedded(int control, int value) {
 
 
 
-static unsigned char *outbuf = NULL;
-
-espeak_EVENT *event_list = NULL;
-static int event_list_ix = 0;
-static int n_event_list;
-static long count_samples;
-
 static unsigned int my_unique_identifier = 0;
 static void *my_user_data = NULL;
 static espeak_ng_OUTPUT_MODE my_mode = ENOUTPUT_MODE_SYNCHRONOUS;
-static int out_samplerate = 0;
 static espeak_ng_STATUS err = ENS_OK;
-
-static t_espeak_callback *synth_callback = NULL;
-
-// Forward declarations for sync_espeak functions
-espeak_ng_STATUS sync_espeak_Synth(unsigned int unique_identifier, const void *text,
-	unsigned int position, espeak_POSITION_TYPE position_type, unsigned int end_position, unsigned int flags, void *user_data);
-espeak_ng_STATUS sync_espeak_Synth_Mark(unsigned int unique_identifier, const void *text,
-	const char *index_mark, unsigned int end_position, unsigned int flags, void *user_data);
-espeak_ng_STATUS sync_espeak_Key(const char *key);
-espeak_ng_STATUS sync_espeak_Char(wchar_t character);
-void sync_espeak_SetPunctuationList(const wchar_t *punctlist);
 
 char path_home[N_PATH_HOME]; // this is the espeak-ng-data directory
 extern int saved_parameters[N_SPEECH_PARAM]; // Parameters saved on synthesis start
-
-void cancel_audio(void) {}
 
 static int check_data_path(const char *path, int allow_directory)
 {
@@ -195,7 +233,6 @@ ESPEAK_NG_API espeak_ng_STATUS espeak_ng_InitializeOutput(espeak_ng_OUTPUT_MODE 
 	(void)device;
 	(void)buffer_length;
 	my_mode = output_mode;
-	out_samplerate = 0;
 	return ENS_OK;
 }
 
@@ -330,8 +367,6 @@ static espeak_ng_STATUS Synthesize(unsigned int unique_identifier, const void *t
 	option_phoneme_input = flags & espeakPHONEMES;
 	option_endpause = flags & espeakENDPAUSE;
 
-	count_samples = 0;
-
 	espeak_ng_STATUS status;
 	if (translator == NULL) {
 		status = espeak_ng_SetVoiceByName(ESPEAKNG_DEFAULT_VOICE);
@@ -358,35 +393,11 @@ static espeak_ng_STATUS Synthesize(unsigned int unique_identifier, const void *t
 
 void MarkerEvent(int type, unsigned int char_position, int value, int value2, unsigned char *out_ptr)
 {
-	(void)out_ptr;
-	// type: 1=word, 2=sentence, 3=named mark, 4=play audio, 5=end, 7=phoneme
-	espeak_EVENT *ep;
-	
-	if ((event_list == NULL) || (event_list_ix >= (n_event_list-2)))
-		return;
-
-	ep = &event_list[event_list_ix++];
-	ep->type = (espeak_EVENT_TYPE)type;
-	ep->unique_identifier = my_unique_identifier;
-	ep->user_data = my_user_data;
-	ep->text_position = char_position & 0xffffff;
-	ep->length = char_position >> 24;
-
-	ep->audio_position = 0;
-	ep->sample = 0;
-
-	if ((type == espeakEVENT_MARK) || (type == espeakEVENT_PLAY))
-		ep->id.name = &namedata[value];
-	else if (type == espeakEVENT_PHONEME) {
-		int *p;
-		p = (int *)(ep->id.string);
-		p[0] = value;
-		p[1] = value2;
-	} else
-		ep->id.number = value;
+	(void)type; (void)char_position; (void)value; (void)value2; (void)out_ptr;
+	// No-op in G2P-only build (no event list)
 }
 
-espeak_ng_STATUS sync_espeak_Synth(unsigned int unique_identifier, const void *text,
+static espeak_ng_STATUS sync_espeak_Synth(unsigned int unique_identifier, const void *text,
                                    unsigned int position, espeak_POSITION_TYPE position_type,
                                    unsigned int end_position, unsigned int flags, void *user_data)
 {
@@ -420,70 +431,7 @@ espeak_ng_STATUS sync_espeak_Synth(unsigned int unique_identifier, const void *t
 	return aStatus;
 }
 
-espeak_ng_STATUS sync_espeak_Synth_Mark(unsigned int unique_identifier, const void *text,
-                                        const char *index_mark, unsigned int end_position,
-                                        unsigned int flags, void *user_data)
-{
-	InitText(flags);
-
-	my_unique_identifier = unique_identifier;
-	my_user_data = user_data;
-
-	if (index_mark != NULL) {
-		strncpy0(skip_marker, index_mark, sizeof(skip_marker));
-		skipping_text = true;
-	}
-
-	end_character_position = end_position;
-
-	return Synthesize(unique_identifier, text, flags | espeakSSML);
-}
-
-espeak_ng_STATUS sync_espeak_Key(const char *key)
-{
-	// symbolic name, symbolicname_character  - is there a system resource of symbolic names per language?
-	int letter;
-	int ix;
-
-	ix = utf8_in(&letter, key);
-	if (key[ix] == 0) // a single character
-		return sync_espeak_Char(letter);
-
-	my_unique_identifier = 0;
-	my_user_data = NULL;
-	return Synthesize(0, key, 0); // speak key as a text string
-}
-
-espeak_ng_STATUS sync_espeak_Char(wchar_t character)
-{
-	// is there a system resource of character names per language?
-	char buf[80];
-	my_unique_identifier = 0;
-	my_user_data = NULL;
-
-	sprintf(buf, "<say-as interpret-as=\"tts:char\">&#%d;</say-as>", character);
-	return Synthesize(0, buf, espeakSSML);
-}
-
-void sync_espeak_SetPunctuationList(const wchar_t *punctlist)
-{
-	// Set the list of punctuation which are spoken for "some".
-	my_unique_identifier = 0;
-	my_user_data = NULL;
-
-	option_punctlist[0] = 0;
-	if (punctlist != NULL) {
-		wcsncpy(option_punctlist, punctlist, N_PUNCTLIST);
-		option_punctlist[N_PUNCTLIST-1] = 0;
-	}
-}
-
 #pragma GCC visibility push(default)
-
-ESPEAK_API void espeak_SetSynthCallback(t_espeak_callback *SynthCallback)
-{
-	synth_callback = SynthCallback;
-}
 
 ESPEAK_NG_API espeak_ng_STATUS
 espeak_ng_Synthesize(const void *text, size_t size,
@@ -503,36 +451,6 @@ espeak_ng_Synthesize(const void *text, size_t size,
 	return sync_espeak_Synth(0, text, position, position_type, end_position, flags, user_data);
 }
 
-ESPEAK_NG_API espeak_ng_STATUS
-espeak_ng_SynthesizeMark(const void *text,
-                         size_t size,
-                         const char *index_mark,
-                         unsigned int end_position,
-                         unsigned int flags,
-                         unsigned int *unique_identifier,
-                         void *user_data)
-{
-	(void)size; // unused in non-async modes
-
-	unsigned int temp_identifier;
-
-	if (unique_identifier == NULL)
-		unique_identifier = &temp_identifier;
-	*unique_identifier = 0;
-
-	return sync_espeak_Synth_Mark(0, text, index_mark, end_position, flags, user_data);
-}
-
-ESPEAK_NG_API espeak_ng_STATUS espeak_ng_SpeakKeyName(const char *key_name)
-{
-	return sync_espeak_Key(key_name);
-}
-
-ESPEAK_NG_API espeak_ng_STATUS espeak_ng_SpeakCharacter(wchar_t character)
-{
-	return sync_espeak_Char(character);
-}
-
 ESPEAK_API int espeak_GetParameter(espeak_PARAMETER parameter, int current)
 {
 	// current: 0=default value, 1=current value
@@ -548,7 +466,11 @@ ESPEAK_NG_API espeak_ng_STATUS espeak_ng_SetParameter(espeak_PARAMETER parameter
 
 ESPEAK_NG_API espeak_ng_STATUS espeak_ng_SetPunctuationList(const wchar_t *punctlist)
 {
-	sync_espeak_SetPunctuationList(punctlist);
+	// Inline the logic previously in sync_espeak_SetPunctuationList
+	if (punctlist != NULL) {
+		wcsncpy(option_punctlist, punctlist, N_PUNCTLIST);
+		option_punctlist[N_PUNCTLIST - 1] = 0;
+	}
 	return ENS_OK;
 }
 
@@ -608,11 +530,6 @@ ESPEAK_NG_API espeak_ng_STATUS espeak_ng_Cancel(void)
 	return ENS_OK;
 }
 
-ESPEAK_API int espeak_IsPlaying(void)
-{
-	return 0;
-}
-
 ESPEAK_NG_API espeak_ng_STATUS espeak_ng_Synchronize(void)
 {
 	espeak_ng_STATUS berr = err;
@@ -622,12 +539,6 @@ ESPEAK_NG_API espeak_ng_STATUS espeak_ng_Synchronize(void)
 
 ESPEAK_NG_API espeak_ng_STATUS espeak_ng_Terminate(void)
 {
-	free(event_list);
-	event_list = NULL;
-
-	free(outbuf);
-	outbuf = NULL;
-
 	FreePhData();
 	FreeVoiceList();
 
@@ -648,6 +559,57 @@ ESPEAK_API const char *espeak_Info(const char **ptr)
 	if (ptr != NULL)
 		*ptr = path_home;
 	return version_string;
+}
+
+// Legacy eSpeak API wrappers (merged from espeak_api.c)
+
+static espeak_ERROR status_to_espeak_error(espeak_ng_STATUS status)
+{
+	switch (status)
+	{
+	case ENS_OK:                     return EE_OK;
+	case ENS_SPEECH_STOPPED:         return EE_OK;
+	case ENS_VOICE_NOT_FOUND:        return EE_NOT_FOUND;
+	case ENS_MBROLA_NOT_FOUND:       return EE_NOT_FOUND;
+	case ENS_MBROLA_VOICE_NOT_FOUND: return EE_NOT_FOUND;
+	case ENS_FIFO_BUFFER_FULL:       return EE_BUFFER_FULL;
+	default:                         return EE_INTERNAL_ERROR;
+	}
+}
+
+ESPEAK_API int espeak_Initialize(espeak_AUDIO_OUTPUT output_type, int buf_length, const char *path, int options)
+{
+	(void)output_type; // G2P only - always synchronous
+
+	espeak_ng_InitializePath(path);
+	espeak_ng_ERROR_CONTEXT context = NULL;
+	espeak_ng_STATUS result = espeak_ng_Initialize(&context);
+	if (result != ENS_OK) {
+		espeak_ng_PrintStatusCodeMessage(result, stderr, context);
+		espeak_ng_ClearErrorContext(&context);
+		if ((options & espeakINITIALIZE_DONT_EXIT) == 0)
+			exit(1);
+	}
+
+	espeak_ng_InitializeOutput(ENOUTPUT_MODE_SYNCHRONOUS, buf_length, NULL);
+
+	option_phoneme_events = (options & (espeakINITIALIZE_PHONEME_EVENTS | espeakINITIALIZE_PHONEME_IPA));
+
+	return espeak_ng_GetSampleRate();
+}
+
+ESPEAK_API espeak_ERROR espeak_Synth(const void *text, size_t size,
+                                     unsigned int position,
+                                     espeak_POSITION_TYPE position_type,
+                                     unsigned int end_position, unsigned int flags,
+                                     unsigned int *unique_identifier, void *user_data)
+{
+	return status_to_espeak_error(espeak_ng_Synthesize(text, size, position, position_type, end_position, flags, unique_identifier, user_data));
+}
+
+ESPEAK_API espeak_ERROR espeak_SetParameter(espeak_PARAMETER parameter, int value, int relative)
+{
+	return status_to_espeak_error(espeak_ng_SetParameter(parameter, value, relative));
 }
 
 #pragma GCC visibility pop
