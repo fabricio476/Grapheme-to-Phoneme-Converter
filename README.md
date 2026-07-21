@@ -141,9 +141,18 @@ Grapheme-to-Phoneme-Converter/
 └── docs/                   # Documentações e tabelas de referência
 ```
 
+## Caso de Uso & Motivação (ex: Piper TTS)
+
+Este conversor é especialmente útil para motores de síntese de voz neurais modernos, como o **[Piper TTS](https://github.com/rhasspy/piper)**. 
+
+Motores como o Piper utilizam o eSpeak NG apenas como um **fonetizador (phonemizer)** para traduzir o texto de entrada em IDs de fonemas antes de passá-los para a rede neural de síntese (VITS). Ao portar o Piper para plataformas móveis (como Android via NDK) ou embarcados, compilar o eSpeak NG original completo traz um grande volume de código de áudio desnecessário e dependências obsoletas.
+
+Este repositório resolve esse problema fornecendo uma biblioteca G2P enxuta, permitindo compilações mais rápidas, arquivos binários finais menores e integração simplificada via JNI/Kotlin.
+
 ## Origem do Projeto
 
 Este projeto é um fork do [eSpeak NG](https://github.com/espeak-ng/espeak-ng), modificado especificamente para atuar apenas como conversor de Grafema para Fonema (G2P). Toda e qualquer funcionalidade de síntese de áudio, geração de áudio (WAV) ou execução de som foram completamente removidas da base de código.
+
 
 ## Licença
 
