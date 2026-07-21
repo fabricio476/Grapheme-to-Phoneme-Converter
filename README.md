@@ -1,151 +1,150 @@
-# eSpeak NG - Grapheme-to-Phoneme Converter
+# eSpeak NG - Conversor de Grafema para Fonema (G2P)
 
-A compact, open-source **Grapheme-to-Phoneme (G2P)** converter based on [eSpeak NG](https://github.com/espeak-ng/espeak-ng). This project strips away all audio synthesis and playback functionality, retaining only the core text-to-phoneme conversion engine.
+Um conversor compacto e de código aberto de **Grafema para Fonema (G2P)** baseado no [eSpeak NG](https://github.com/espeak-ng/espeak-ng). Este projeto foi simplificado ao remover toda a funcionalidade de síntese de áudio e reprodução de som, mantendo exclusivamente o motor principal de transcrição fonética.
 
-Supports **[100+ languages and accents](docs/languages.md)**.
+Suporta **mais de 100 idiomas e sotaques**.
 
-## Features
+## Recursos
 
-- **G2P conversion** — converts text to phoneme representations
-- **IPA output** — International Phonetic Alphabet transcription (`--ipa`)
-- **Phoneme mnemonics** — eSpeak native phoneme notation (`-x`)
-- **Trace mode** — step-by-step rule application debugging (`-X`)
-- **Customizable separators** — between phonemes (`--sep`, `--tie`)
-- **Multi-language** — supports 100+ languages via voice selection (`-v`)
-- **Dictionary compilation** — compile custom pronunciation dictionaries (`--compile`)
-- **Self-contained** — includes all pre-compiled phoneme data; no external dependencies
-- **Compact** — ~19MB total data for all languages
-- Written in C
+- **Conversão G2P:** Converte textos escritos em representações de fonemas.
+- **Saída em IPA:** Transcrição no Alfabeto Fonético Internacional utilizando o parâmetro `--ipa`.
+- **Mnemônicos de Fonemas:** Notação nativa de fonemas do eSpeak com `-x`.
+- **Modo Trace (Rastreamento):** Depuração passo a passo da aplicação das regras linguísticas usando `-X`.
+- **Separadores Customizáveis:** Defina caracteres separadores entre os fonemas (`--sep` e `--tie`).
+- **Multi-idioma:** Suporte a dezenas de vozes/línguas com o parâmetro `-v` (por exemplo, `pt-br` para português brasileiro).
+- **Compilação de Dicionários:** Permite compilar regras e dicionários de pronúncia personalizados com `--compile`.
+- **Compacto e Independente:** Inclui todas as tabelas de fonemas pré-compiladas, sem necessidade de dependências externas complexas (~19MB no total).
+- Desenvolvido em C.
 
-## Building
+## Como Compilar
 
-### Requirements
+### Requisitos
 
 - CMake ≥ 3.8
-- C compiler (GCC or Clang)
+- Compilador C (GCC ou Clang)
 
-### Build Steps
+### Passos para Compilação
+
+Para compilar o projeto em ambiente Linux, execute:
 
 ```bash
-mkdir build && cd build
+mkdir -p build && cd build
 cmake ..
 make -j$(nproc)
 ```
 
-The build automatically copies the pre-compiled phoneme data to the build directory.
+Durante a compilação, as tabelas de fonemas pré-compiladas serão copiadas automaticamente para o diretório `build`.
 
-### Verify Installation
+### Validar Instalação
+
+Após compilar, você pode testar o conversor usando:
 
 ```bash
-./build/src/espeak-ng --path=./build -v en --ipa "Hello World"
-# Output: həlˈəʊ wˈɜːld
+./build/src/espeak-ng --path=./build -v pt-br --ipa "Olá Mundo"
+# Saída esperada: olˈa mˈũŋdʊ
 ```
 
-## Usage
+## Como Usar
 
-### Basic G2P (eSpeak notation)
+### Conversão Básica (Notação eSpeak)
 
 ```bash
-espeak-ng --path=<data-dir> -v <language> -x "text"
+./build/src/espeak-ng --path=build -v pt-br -x "Olá"
 ```
 
-### IPA Output
+### Saída em Alfabeto Fonético Internacional (IPA)
 
 ```bash
-espeak-ng --path=<data-dir> -v en --ipa "Hello World"
+./build/src/espeak-ng --path=build -v pt-br --ipa "Olá Mundo"
+# olˈa mˈũŋdʊ
+
+./build/src/espeak-ng --path=build -v en --ipa "Hello World"
 # həlˈəʊ wˈɜːld
-
-espeak-ng --path=<data-dir> -v pt-br --ipa "Olá Mundo"
-# olˈa mˈũŋdʊ
 ```
 
-### IPA with Phoneme Separators
+### IPA com Separadores de Fonemas
 
 ```bash
-espeak-ng --path=<data-dir> -v pt-br --ipa --sep=" " "Olá Mundo"
-# o l ˈa  m ˈũ ŋ d ʊ
+./build/src/espeak-ng --path=build -v pt-br --ipa --sep=" " "Olá"
+# o l ˈa
 ```
 
-### Trace Mode (rule debugging)
+### Modo Trace (Depuração de Regras)
 
 ```bash
-espeak-ng --path=<data-dir> -v en -X "Testing"
-# Shows step-by-step rule application
+./build/src/espeak-ng --path=build -v pt-br -X "Teste"
+# Mostra detalhadamente a aplicação das regras de tradução
 ```
 
-### From File
+### A partir de um Arquivo
 
 ```bash
-espeak-ng --path=<data-dir> -v en --ipa -f input.txt
+./build/src/espeak-ng --path=build -v pt-br --ipa -f entrada.txt
 ```
 
-### From stdin
+### A partir da Entrada Padrão (stdin)
 
 ```bash
-echo "Hello" | espeak-ng --path=<data-dir> -v en --ipa --stdin
+echo "Olá" | ./build/src/espeak-ng --path=build -v pt-br --ipa --stdin
 ```
 
-### Compile Custom Dictionary
+### Compilar Dicionário Customizado
+
+Se você alterar as regras em `dictsource/`, compile o dicionário com:
 
 ```bash
-espeak-ng --path=<data-dir> -v en --compile
+./build/src/espeak-ng --path=build -v pt-br --compile
 ```
 
-### List Available Voices
+### Listar Vozes Disponíveis
 
 ```bash
-espeak-ng --path=<data-dir> --voices
-espeak-ng --path=<data-dir> --voices=pt    # Portuguese voices only
+./build/src/espeak-ng --path=build --voices
+./build/src/espeak-ng --path=build --voices=pt    # Apenas vozes em português
 ```
 
-## Command-Line Options
+## Opções da Linha de Comando
 
-| Option | Description |
-|--------|-------------|
-| `-v <voice>` | Select voice/language (e.g., `en`, `pt-br`, `fr`) |
-| `-x` | Output phonemes in eSpeak notation |
-| `-X` | Output phonemes with translation trace |
-| `--ipa` | Output in International Phonetic Alphabet |
-| `--sep=<char>` | Separate phonemes with given character |
-| `--tie=<char>` | Tie character for multi-letter phonemes |
-| `-f <file>` | Read text from file |
-| `--stdin` | Read text from stdin |
-| `--path=<dir>` | Path to directory containing `espeak-ng-data` |
-| `--phonout=<file>` | Write phoneme output to file |
-| `--compile` | Compile pronunciation dictionary |
-| `--voices[=<lang>]` | List available voices |
-| `--version` | Show version |
-| `-h`, `--help` | Show help |
+| Opção | Descrição |
+| :--- | :--- |
+| `-v <voz>` | Seleciona a voz/idioma (ex: `pt-br`, `en`, `fr`) |
+| `-x` | Saída de fonemas na notação nativa do eSpeak |
+| `-X` | Saída de fonemas acompanhada da depuração (trace) das regras |
+| `--ipa` | Saída usando o Alfabeto Fonético Internacional (IPA) |
+| `--sep=<char>` | Caractere para separar os fonemas gerados |
+| `--tie=<char>` | Caractere de ligação para fonemas compostos por mais de uma letra |
+| `-f <arquivo>` | Lê o texto de entrada de um arquivo |
+| `--stdin` | Lê o texto de entrada do terminal (stdin) |
+| `--path=<dir>` | Caminho para o diretório contendo a pasta `espeak-ng-data` |
+| `--phonout=<file>` | Grava a saída fonética diretamente em um arquivo |
+| `--compile` | Compila as regras e o dicionário de pronúncia |
+| `--voices[=<lingua>]` | Lista todas as vozes ou filtra por idioma |
+| `--version` | Exibe a versão do programa |
+| `-h`, `--help` | Exibe a ajuda da linha de comando |
 
-## Project Structure
+## Estrutura do Projeto
 
-```
-meu-g2p/
-├── CMakeLists.txt          # Build configuration
-├── cmake/                  # CMake modules
-├── dictsource/             # Dictionary source files
-├── espeak-ng-data/         # Pre-compiled phoneme data + dictionaries
-│   ├── phontab             # Phoneme table (compiled)
-│   ├── phondata            # Phoneme data (compiled)
-│   ├── phonindex           # Phoneme index (compiled)
-│   ├── intonations         # Intonation patterns (compiled)
-│   ├── *_dict              # Language dictionaries (compiled)
-│   ├── lang/               # Language definitions
-│   └── voices/             # Voice configurations
+```text
+Grapheme-to-Phoneme-Converter/
+├── CMakeLists.txt          # Configuração de build
+├── cmake/                  # Módulos adicionais do CMake
+├── dictsource/             # Arquivos de origem dos dicionários (regras de pronúncia)
+├── espeak-ng-data/         # Dicionários e dados de fonemas pré-compilados
+│   ├── phontab             # Tabela de fonemas compilada
+│   ├── phondata            # Dados de fonemas compilados
+│   ├── *_dict              # Dicionários de idiomas compilados
+│   ├── voices/             # Arquivos de definição de vozes/sotaques
+│   └── lang/               # Definições específicas de idiomas
 ├── src/
-│   ├── espeak-ng.c         # CLI application
-│   └── libespeak-ng/       # Core G2P library
-└── docs/                   # Documentation
+│   ├── espeak-ng.c         # Aplicação principal (CLI)
+│   └── libespeak-ng/       # Biblioteca principal do motor G2P
+└── docs/                   # Documentações e tabelas de referência
 ```
 
-## Supported Languages
+## Origem do Projeto
 
-See [docs/languages.md](docs/languages.md) for the full list of 100+ supported languages.
+Este projeto é um fork do [eSpeak NG](https://github.com/espeak-ng/espeak-ng), modificado especificamente para atuar apenas como conversor de Grafema para Fonema (G2P). Toda e qualquer funcionalidade de síntese de áudio, geração de áudio (WAV) ou execução de som foram completamente removidas da base de código.
 
-## Origin
+## Licença
 
-This project is a fork of [eSpeak NG](https://github.com/espeak-ng/espeak-ng), modified to function exclusively as a G2P converter. All audio synthesis, WAV generation, and playback capabilities have been removed.
-
-## License
-
-Released under the [GPL version 3](COPYING) or later.
+Distribuído sob a licença [GNU GPL versão 3](COPYING) ou posterior.

@@ -1,9 +1,0 @@
-#define HAVE_MKSTEMP 1
-#define HAVE_NBTOOL_CONFIG_H 0
-#define HAVE_DECL_OPTRESET 0
-#define HAVE_SYS_ENDIAN_H 0
-#define HAVE_ISWBLANK 1
-
-#define USE_LIBSONIC 1
-
-#define PACKAGE_VERSION "1.52.0.1"
